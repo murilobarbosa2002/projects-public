@@ -1,0 +1,20 @@
+extend common/template.pug
+
+block vuejs
+	-var vuejs = false;
+//- block vuejs
+
+block title
+	-var title = 'Document';
+//- block title
+
+block theme
+	-var theme = "#bd1e33"; // NAO SE ESQUEÇA DE TROCAR PARA COR TEMA DO SITE
+//- block theme
+
+block active
+	-var active  = 'clientes';
+
+block conteudo
+	include internas/clientes_e_parceiros/dev/modelo-2.pug
+//- block conteudo

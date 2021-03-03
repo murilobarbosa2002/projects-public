@@ -1,0 +1,15 @@
+@function color-contrast($background: #f00) {
+	$r: red($background);
+	$g: green($background);
+	$b: blue($background);
+
+	$yiq: (($r*299)+($g*587)+($b*114))/1000;
+
+	@if ($yiq >= 128) {
+		@return  #000;
+	}
+
+	@else {
+		@return #FFF;
+	}
+}

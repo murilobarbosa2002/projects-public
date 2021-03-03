@@ -1,0 +1,7 @@
+@function toRen ($font: 16px) {
+	@return ($font / 16) * 1rem;
+}
+
+@function toRem ($font: 16px) {
+	@return toRen($font);
+}

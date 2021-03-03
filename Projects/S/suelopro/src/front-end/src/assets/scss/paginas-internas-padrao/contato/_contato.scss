@@ -1,0 +1,10 @@
+@import "_modelo-1.scss";
+@import "_modelo-2.scss";
+@import "_modelo-3.scss";
+
+.contato-page{
+	#mapa-contato{
+		@extend .embed-responsive;
+		background: #F2F2F2;
+	}
+}

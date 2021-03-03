@@ -1,0 +1,92 @@
+main.contato-page#contato1(data-lazy-bg="assets/images/bg-contato-1.jpg")
+
+	.page-header
+		.container
+			h1 ENTRE EM CONTATO
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span ENTRE EM CONTATO
+		//- .container
+	//- .page-header
+
+	.container.pdt-70
+		.row.text-center
+			.col-lg-4.mgb-30
+				p #[i.fas.fa-2x.fa-map-marker]
+				p Av. Lorem Ipsum Dolor Set, 201 - Centri #[br] CEP: 99.999-999 #[br] São Paulo - SP
+			///.col-lg-4
+
+			.col-lg-4.mgb-30
+				p #[i.fas.fa-2x.fa-phone.fa-flip-horizontal]
+				p (99) 9999 - (99) 9999-9999
+			///.col-lg-4
+
+			.col-lg-4.mgb-30
+				p #[i.fas.fa-2x.fa-envelope]
+				p contato@dominio.com.br
+			///.col-lg-4
+		///.row
+
+		//- +alertas
+
+		.row
+			.col-lg-6
+				form.mgb-40
+					.row
+						.col-md-6
+							.md-form.has-success
+								label(for="nome-contato") NOME
+								input(type="text" name="nome-contato" id="nome-contato" value="Fulano de Tal").form-control
+								.hover-eff
+						//- .col-md-6
+						.col-md-6
+							.md-form.has-error
+								label(for="email-contato") E-MAIL
+								input(type="email" name="email-contato" id="email-contato" value="asdqwef13rg").form-control
+								.hover-eff
+						//- .col-md-6
+					//- .row
+					.row
+						.col-md-6
+							.md-form
+								label(for="tel-contato") TELEFONE
+								input(type="tel" name="tel-contato" id="tel-contato").form-control
+								.hover-eff
+						//- .col-md-6
+						.col-md-6
+							.md-form
+								label(for="assunto-contato") ASSUNTO
+								input(type="text" name="assunto-contato" id="assunto-contato").form-control
+								.hover-eff
+						//- .col-md-6
+					//- .row
+
+					.md-form
+						label(for="msg-contato") MENSAGEM
+						textarea(name="msg-contato" id="msg-contato" rows="5").form-control
+						.hover-eff
+					//- .md-form
+
+					button.btn.btn-enviar ENVIAR
+				//- form
+
+				.media.media-contato
+					i.icon.telemarketing
+					.media-body
+						p Ligue grátis: #[strong(style="font-size:2em") 0800 664 9000] #[br] Atendimento: Segunda à Sexta-feira: 8h às 18h
+				//- .media.media-contato
+			//- .col-lg-6
+			.col-lg-6.align-self-end.text-right
+				img(src="assets/images/img-contato.png").img-fluid
+		///.row
+	/// .container
+
+	#mapa-contato
+		script.
+			var mapa = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.5487789779054!2d-49.62274668485992!3d-22.8931210431393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDUzJzM1LjMiUyA0OcKwMzcnMTQuMCJX!5e0!3m2!1spt-BR!2sbr!4v1545243395314" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>';
+			var mapaContainer = document.getElementById('mapa-contato');
+
+			window.addEventListener('load', function(){
+				mapaContainer.insertAdjacentHTML('afterbegin', mapa);
+			})
+//- main.contato-page#contato1

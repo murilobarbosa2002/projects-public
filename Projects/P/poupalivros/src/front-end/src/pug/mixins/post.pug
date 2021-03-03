@@ -1,0 +1,54 @@
+mixin post(img)
+	-var img = img || 'http://placehold.it/350x350';
+	article.post-thumbnail
+		.foto
+			lazy-image(src=`${img}` alt="Titulo da noticia" style="--width: 350;--height: 350;")
+		//- .foto
+		.content
+			h3.nome Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna.
+			.details
+				.data
+					time(datatime="07-10-2019") 07.10.2018
+				.tags
+					span(aria-label="categoria post") CATEGORIA LOREM IPSUM
+			//- .data
+			.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum dolores animi ab facere, ipsa eaque quis numquam a. Alias atque perferendis natus vero nulla rerum molestias fuga ea quidem!
+			a(href="#").ver-detalhes LEIA MAIS #[i.fas.fa-arrow-right]
+	//- .post
+
+mixin post-g(img)
+	-var img = img || 'http://placehold.it/540x540';
+	article.post-thumbnail.post-g
+		.foto
+			lazy-image(src=`${img}` alt="Titulo da noticia" style="--width: 540;--height: 540;")
+		//- .foto
+		.content
+			h3.nome Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna.
+			.details
+				.data
+					time(datatime="07-10-2019") 07.10.2018
+				.tags
+					span(aria-label="categoria post") CATEGORIA LOREM IPSUM
+			//- .data
+			.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum dolores animi ab facere, ipsa eaque quis numquam a. Alias atque perferendis natus vero nulla rerum molestias fuga ea quidem!
+			a(href="#").ver-detalhes LEIA MAIS #[i.fas.fa-arrow-right]
+	//- .post
+
+mixin post-h(img)
+	-var img = img || 'http://placehold.it/160x160';
+	article.media.post-thumbnail-horizontal
+		.foto
+			lazy-image(src=`${img}` alt="Titulo do post" style="--width: 160;--height: 160")
+		//- .foto
+		.media-body
+			h3.nome Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna. Título da notícia lorem ipsum sit amet, ut labore et dolore magna.
+			.details
+				.data
+					time(datatime="07-10-2019") 07.10.2018
+				.tags
+					span(aria-label="categoria post") CATEGORIA LOREM IPSUM
+			//- .data
+			.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatum dolores animi ab facere, ipsa eaque quis numquam a. Alias atque perferendis natus vero nulla rerum molestias fuga ea quidem!
+			a(href="#").ver-detalhes LEIA MAIS #[i.fas.fa-arrow-right]
+		//- .media-body
+	//- .media.post-thumbnail-horizontal

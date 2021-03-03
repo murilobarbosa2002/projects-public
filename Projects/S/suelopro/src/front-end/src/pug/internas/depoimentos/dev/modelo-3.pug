@@ -1,0 +1,48 @@
+main.depoimentos#depoimento-mod-3
+	.page-header
+		.container
+			h1 Depoimentos
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span Depoimentos
+		//- .container
+	//- .page-header
+	.container
+		h2.titles.mgb-40 O que as pessoas dizem sobre a #[strong(style="color:#000") Nome da Empresa:]
+
+		.carousel#depoimentos-3(data-interval="5000" data-pause="true").slide
+			.carousel-inner
+
+				// REPETE
+				.carousel-item.active
+					.depoimento
+						.content
+							p This is Protoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, mentum sit.
+						.autor
+							.nome John Dow
+							.empresa Nome da Empresa
+						//- .autor
+					//- .depoimento
+				// FIM REPETE
+
+				// REPETE
+				.carousel-item
+					.depoimento
+						.content
+							p This is Protoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, mentum sit.
+						.autor
+							.nome Mike Jhonsom
+							.empresa Nome da Empresa
+						//- .autor
+					//- .depoimento
+				// FIM REPETE
+
+			//- .carousel-inner
+
+			.controles
+				a(href="#depoimentos-3" data-slide="prev"): i.fa.fa-arrow-left
+				a(href="#depoimentos-3" data-slide="next"): i.fa.fa-arrow-right
+			//- .controles
+		//- .carousel#depoimentos-3
+	//- .container
+//- main.depoimentos#depoimento-mod-3

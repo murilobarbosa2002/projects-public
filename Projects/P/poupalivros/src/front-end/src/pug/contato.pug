@@ -1,0 +1,186 @@
+extend common/template.pug
+
+block title
+	-var title = '$projectname';
+//- block title
+
+block theme
+	-var $theme = '#bd1e33';
+//- block theme
+
+block conteudo
+	.internas.contato-page#contato2
+		.page-header
+			.container
+				h1 Contato
+				ol.breadcrumbs
+					li: a(href="#") HOME
+					li: span Contato
+				//- ol.breadcrumb
+			//- .container
+		//- .page-header
+		#mapa-contato
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14701.305324820305!2d-49.62847368022461!3d-22.90133134999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1609786249827!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy"></iframe>
+		//- #mapa-contato
+		.container.pdt-40
+			.row.justify-content-between
+				.col-lg-5.mgb-30
+					h2 Fale Conosco
+
+					address.mgb-30.info-block
+						h3 Endereço
+						p Rua Lorem Ipsum Dolor Set, 345 - Centro - Rio de Janeiro – RJ  #[br] CEP 18960-000 - Caixa Postal 45
+					//- address.mgb-30
+
+					h3.media.mgb-30.align-items-center
+						i.icon.telemarketing-sm.mr-3
+						.media-body Central de Relacionamento com o Cliente
+					//- .media
+
+					.mgb-30.info-block
+						h4 Telefone:
+						p (21) 3346.2408  -  (21) 99834-3467
+					//- address.mgb-30
+
+					.mgb-30.info-block
+						h4 E-mail
+						p contato@dominio.com.br
+					//- address.mgb-30
+
+					.mgb-30.info-block
+						h4 Horário de Atendimento
+						p Segunda a Sexta-feira - 8:00h às 18:00h
+						p Sábados - 08:00 às 12:00h
+					//- address.mgb-30
+				//- .col-lg-5
+
+				.col-lg-6.mgb-30
+					form
+						p Alguma dúvida? Nos mande um email, teremos o prazer em atende-lô.
+
+						.form-group.has-success
+							label(for="nome-contato").sr-only Digite seu nome...
+							input(type="text" name="nome-contato" id="nome-contato" placeholder="Digite seu nome..." value="Fulano de Tal").form-control
+							.message-validation {{ message.success }}
+						//- .form-group
+						.form-group.has-error
+							label(for="email-contato").sr-only Digite seu email...
+							input(type="email" name="email-contato" id="email-contato" placeholder="Digite seu email..." value="Dasfbnr376").form-control
+							.message-validation {{ message.error }}
+						//- .form-group
+						.form-group.has-warning
+							label(for="tel-contato").sr-only Digite seu telefone...
+							input(type="tel" name="tel-contato" id="tel-contato" placeholder="Digite seu telefone...").form-control
+							.message-validation {{ message.warning }}
+						//- .form-group
+						.row
+							.col-md-6
+								.form-group.select-custom
+									label.sr-only(for="uf-orcamento") Estado
+									label(for="uf-orcamento").form-control.output Estado
+									.drop-options
+										input(type="text" name="filtro" data-target="#options-uf-orcamento" id="uf-orcamento")
+										ul#options-uf-orcamento.options-list
+											li
+												input#uf-orcamento-option-AC(type='radio' name='uf-orcamento' value='AC')
+												label(for='uf-orcamento-option-AC') Acre
+											li
+												input#uf-orcamento-option-AP(type='radio' name='uf-orcamento' value='AP')
+												label(for='uf-orcamento-option-AP') Amap&aacute;
+											li
+												input#uf-orcamento-option-AM(type='radio' name='uf-orcamento' value='AM')
+												label(for='uf-orcamento-option-AM') Amazonas
+											li
+												input#uf-orcamento-option-PA(type='radio' name='uf-orcamento' value='PA')
+												label(for='uf-orcamento-option-PA') Par&aacute;
+											li
+												input#uf-orcamento-option-RO(type='radio' name='uf-orcamento' value='RO')
+												label(for='uf-orcamento-option-RO') Roraima
+											li
+												input#uf-orcamento-option-RR(type='radio' name='uf-orcamento' value='RR')
+												label(for='uf-orcamento-option-RR') Rond&ocirc;nia
+											li
+												input#uf-orcamento-option-TO(type='radio' name='uf-orcamento' value='TO')
+												label(for='uf-orcamento-option-TO') Tocantins
+											li
+												input#uf-orcamento-option-AL(type='radio' name='uf-orcamento' value='AL')
+												label(for='uf-orcamento-option-AL') Alagoas
+											li
+												input#uf-orcamento-option-BA(type='radio' name='uf-orcamento' value='BA')
+												label(for='uf-orcamento-option-BA') Bahia
+											li
+												input#uf-orcamento-option-CE(type='radio' name='uf-orcamento' value='CE')
+												label(for='uf-orcamento-option-CE') Cear&aacute;
+											li
+												input#uf-orcamento-option-MA(type='radio' name='uf-orcamento' value='MA')
+												label(for='uf-orcamento-option-MA') Maranhao
+											li
+												input#uf-orcamento-option-PB(type='radio' name='uf-orcamento' value='PB')
+												label(for='uf-orcamento-option-PB') Para&iacute;ba
+											li
+												input#uf-orcamento-option-PE(type='radio' name='uf-orcamento' value='PE')
+												label(for='uf-orcamento-option-PE') Pernambuco
+											li
+												input#uf-orcamento-option-PI(type='radio' name='uf-orcamento' value='PI')
+												label(for='uf-orcamento-option-PI') Piau&iacute;
+											li
+												input#uf-orcamento-option-RN(type='radio' name='uf-orcamento' value='RN')
+												label(for='uf-orcamento-option-RN') Rio Grande do Norte
+											li
+												input#uf-orcamento-option-SE(type='radio' name='uf-orcamento' value='SE')
+												label(for='uf-orcamento-option-SE') Sergipe
+											li
+												input#uf-orcamento-option-DF(type='radio' name='uf-orcamento' value='DF')
+												label(for='uf-orcamento-option-DF') Distrito Federal
+											li
+												input#uf-orcamento-option-GO(type='radio' name='uf-orcamento' value='GO')
+												label(for='uf-orcamento-option-GO') Goi&aacute;s
+											li
+												input#uf-orcamento-option-MT(type='radio' name='uf-orcamento' value='MT')
+												label(for='uf-orcamento-option-MT') Mato Grosso
+											li
+												input#uf-orcamento-option-MS(type='radio' name='uf-orcamento' value='MS')
+												label(for='uf-orcamento-option-MS') Mato grosso do Sul
+											li
+												input#uf-orcamento-option-ES(type='radio' name='uf-orcamento' value='ES')
+												label(for='uf-orcamento-option-ES') Espirito Santo
+											li
+												input#uf-orcamento-option-MG(type='radio' name='uf-orcamento' value='MG')
+												label(for='uf-orcamento-option-MG') Minas Gerais
+											li
+												input#uf-orcamento-option-RJ(type='radio' name='uf-orcamento' value='RJ')
+												label(for='uf-orcamento-option-RJ') Rio de Janeiro
+											li
+												input#uf-orcamento-option-SP(type='radio' name='uf-orcamento' value='SP')
+												label(for='uf-orcamento-option-SP') S&atilde;o Paulo
+											li
+												input#uf-orcamento-option-PR(type='radio' name='uf-orcamento' value='PR')
+												label(for='uf-orcamento-option-PR') Paran&aacute;
+											li
+												input#uf-orcamento-option-RS(type='radio' name='uf-orcamento' value='RS')
+												label(for='uf-orcamento-option-RS') Rio Grande do Sul
+											li
+												input#uf-orcamento-option-SC(type='radio' name='uf-orcamento' value='SC')
+												label(for='uf-orcamento-option-SC') Santa Catarina
+
+								//- .form-group
+							//- .col-md-6
+							.col-md-6
+								.form-group
+									label(for="cidade-contato").sr-only Cidade
+									input(type="text" name="cidade-contato" id="cidade-contato" placeholder="Cidade").form-control
+								//- .form-group
+							//- .col-md-6
+						//- .row
+
+						.form-group
+							label(for="msg-contato").sr-only Mensagem
+							textarea(name="msg-contato" id="msg-contato" placeholder="Mensagem" rows="5").form-control
+						//- .form-group
+
+						button.btn.btn-enviar.btn-block ENVIAR FORMULÁRIO
+					//- form
+				//- .col-lg-7
+			//- .row
+		//- .container.pdt-40
+//- block conteudo

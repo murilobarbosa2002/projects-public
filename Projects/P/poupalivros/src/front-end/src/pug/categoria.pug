@@ -1,0 +1,37 @@
+extend common/template.pug
+
+block title
+	-var title = '$projectname';
+//- block title
+
+block theme
+	-var $theme = '#bd1e33';
+//- block theme
+
+block conteudo
+	.internas
+		.page-header
+			.container
+				h1 CATEGORIA
+				ol.breadcrumbs
+					li: a(href="#") HOME
+					li: span CATEGORIA
+				//- ol.breadcrumb
+			//- .container
+		//- .page-header
+		.container
+			.row
+				section.col-lg-8.mgb-30
+					.row
+						-for(var c=0;c<4;c++)
+							-var d=c+4;
+							-var img = `assets/images/post-thumbnail-${d}-350x350.webp`;
+							// REPETE
+							.col-md-6.mgb-30
+								+post(img)
+							// FIM REPETE
+					//- .row
+				//- section.col-xl-8
+				.col-lg-4.mgb-30
+					include common/sidebar.pug
+//- block conteudo

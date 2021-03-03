@@ -1,0 +1,3 @@
+@function toEm($fontSize: 16, $fontSizeBase: 16){
+	@return ($fontSize / $fontSizeBase) * 1em;
+}

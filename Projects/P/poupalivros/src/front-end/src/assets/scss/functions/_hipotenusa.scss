@@ -1,0 +1,5 @@
+@function hipotenusa($c1: 1, $c2: 1){
+	$hQ : potencia($c1,2) + potencia($c2,2);
+
+	@return sqrt($hQ);
+}

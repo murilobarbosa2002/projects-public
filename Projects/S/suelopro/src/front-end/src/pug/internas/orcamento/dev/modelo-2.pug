@@ -1,0 +1,170 @@
+main.orcamentos#orcamento-mod-2
+	header.page-header
+		.container
+			h1 Orçamento
+
+			ol.breadcrumb
+				li: a(href="#") Home
+				li: span Orçamento
+			//- ol.breadcrumb
+		//- .container
+	//- header.page-header
+	.container
+		.mgb-30
+			h2 Faça seu Orçamento
+			p.h3 Preencha o formulário abaixo e tenha seu orçamento sem compromisso
+		.hr
+
+		//- #alertas
+		//- 	.alert.alert-success
+		//- 		.media
+		//- 			i.icon-alerta.fas.fa-check-circle
+		//- 			.media-body {{ message.success }}
+		//- 		//- .media
+		//- 		button(type="button" data-dismiss="alert" aria-label="Fechar").close &times;
+		//- 	//- .alert.alert-danger
+
+		//- 	.alert.alert-warning
+		//- 		.media
+		//- 			i.icon-alerta.fas.fa-exclamation-triangle
+		//- 			.media-body {{ message.warning }}
+		//- 		//- .media
+		//- 		button(type="button" data-dismiss="alert" aria-label="Fechar").close &times;
+		//- 	//- .alert.alert-danger
+
+		//- 	.alert.alert-danger
+		//- 		.media
+		//- 			i.icon-alerta.fas.fa-exclamation-triangle
+		//- 			.media-body {{ message.danger }}
+		//- 		//- .media
+		//- 		button(type="button" data-dismiss="alert" aria-label="Fechar").close &times;
+		//- 	//- .alert.alert-danger
+
+		//- 	.alert.alert-info
+		//- 		.media
+		//- 			i.icon-alerta.fas.fa-info-circle
+		//- 			.media-body {{ message.info }}
+		//- 		//- .media
+		//- 		button(type="button" data-dismiss="alert" aria-label="Fechar").close &times;
+		//- 	//- .alert.alert-danger
+		//- //- #alertas
+
+		form
+			.row
+				.col-md-4
+					.form-group
+						label.sr-only(for="nome-orcamento") Nome
+						input(type="text" name="nome-orcamento" id="nome-orcamento" placeholder="Nome").form-control
+						label(for="nome-orcamento").fas.fa-user.icon-float
+					//- .form-group
+				//- .col-md-4
+				.col-md-4
+					.form-group
+						label.sr-only(for="email-orcamento") E-mail
+						input(type="email" name="email-orcamento" id="email-orcamento" placeholder="E-mail").form-control
+						label(for="email-orcamento").fas.fa-envelope.icon-float
+					//- .form-group
+				//- .col-md-4
+				.col-md-4
+					.form-group
+						label.sr-only(for="telefone-orcamento") Telefone
+						input(type="tel" name="telefone-orcamento" id="telefone-orcamento" placeholder="Telefone").form-control
+						label(for="telefone-orcamento").fas.fa-phone.fa-flip-horizontal.icon-float
+					//- .form-group
+				//- .col-md-4
+			//- .row
+			.row
+				.col-md-4
+					.form-group
+						label.sr-only(for="cidade-orcamento") Cidade
+						input(type="text" name="cidade-orcamento" id="cidade-orcamento" placeholder="Cidade").form-control
+						label(for="cidade-orcamento").fas.fa-map-marker.icon-float
+					//- .form-group
+
+				.col-md-4
+					-
+						ufs = [
+							['AC' , 'Acre'],
+							['AP' , 'Amapá'],
+							['AM' , 'Amazonas'],
+							['PA' , 'Pará'],
+							['RO' , 'Roraima'],
+							['RR' , 'Rondônia'],
+							['TO' , 'Tocantins'],
+							['AL' , 'Alagoas'],
+							['BA' , 'Bahia'],
+							['CE' , 'Ceará'],
+							['MA' , 'Maranhao'],
+							['PB' , 'Paraíba'],
+							['PE' , 'Pernambuco'],
+							['PI' , 'Piauí'],
+							['RN' , 'Rio Grande do Norte'],
+							['SE' , 'Sergipe'],
+							['DF' , 'Distrito Federal'],
+							['GO' , 'Goiás'],
+							['MT' , 'Mato Grosso'],
+							['MS' , 'Mato grosso do Sul'],
+							['ES' , 'Espirito Santo'],
+							['MG' , 'Minas Gerais'],
+							['RJ' , 'Rio de Janeiro'],
+							['SP' , 'São Paulo'],
+							['PR' , 'Paraná'],
+							['RS' , 'Rio Grande do Sul'],
+							['SC' , 'Santa Catarina']
+						];
+					.form-group.select-custom
+						label.sr-only(for="uf-orcamento") Estado
+
+						label(for="uf-orcamento").form-control.output Estado
+						label(for="uf-orcamento").fa.fa-chevron-down.icon-float
+
+						.drop-options
+							input(type="text" name="filtro" data-target="#options-uf-orcamento" id="uf-orcamento")
+							ul.options-list#options-uf-orcamento
+								each uf in ufs
+									-var estado = uf[1];
+									-var sigla = uf[0];
+									li
+										input(type="radio" id=`uf-orcamento-option-${sigla}` name="uf-orcamento" value=sigla)
+										label(for=`uf-orcamento-option-${sigla}`) #{estado}
+						//- .drop-options
+					//- .form-group
+				//- .col-md-4
+				.col-md-4
+					.form-group.select-custom
+						label.sr-only(for="servicos-orcamento") Servicos
+
+						label(for="servicos-orcamento").form-control.output Servicos
+						label(for="servicos-orcamento").fa.fa-chevron-down.icon-float
+
+						.drop-options
+							input(type="text" name="filtro" data-target="#options-servicos-orcamento" id="servicos-orcamento")
+							ul.options-list#options-servicos-orcamento
+								li
+									input(type="radio" id=`servicos-orcamento-option-1` name="servicos-orcamento" value="Servico 1")
+									label(for=`servicos-orcamento-option-1`) Servico 1
+								li
+									input(type="radio" id=`servicos-orcamento-option-2` name="servicos-orcamento" value="Servico 2")
+									label(for=`servicos-orcamento-option-2`) Servico 2
+								li
+									input(type="radio" id=`servicos-orcamento-option-3` name="servicos-orcamento" value="Servico 3")
+									label(for=`servicos-orcamento-option-3`) Servico 3
+						//- .drop-options
+					//- .form-group.select-custom
+				//- .col-md-4
+			//- .row
+			.form-group
+				label.sr-only(for="assunto-orcamento") Assunto
+				input(type="text" name="assunto-orcamento" id="assunto-orcamento" placeholder="Assunto").form-control
+				label(for="assunto-orcamento").fas.fa-comment.icon-float
+			//- .form-group
+			.form-group
+				label.sr-only(for="msg-orcamento") Mensagem
+				textarea(id="msg-orcamento" name="msg-contato" placeholder="Mensagem" rows="6").form-control
+			//- .form-group
+			.mgb-40.text-right
+				button.btn.btn-enviar ENVIAR FORMULÁRIO
+			//- .form-group
+		//- form
+	//- .container
+//- main.orcamentos#orcamento-mod-2

@@ -1,0 +1,44 @@
+main#videos-3.page-videos
+	.page-header
+		.container
+			h1 Vídeos
+			ul.breadcrumb
+				li: a(href="#") Home
+				li.active: span Vídeos
+		//- .container
+	//- .page-header
+	.container
+		h2.h5.mgb-30 Veja alguns de nossos serviços nos vídeos abaixo:
+
+		.row
+			-for(var v=0;v<6;v++)
+				-var i=v+1;
+				// REPETE
+				.col-sm-6.mgb-30
+					.video-thumbnail
+						template(id=`video-${i}`)
+							<iframe width="798" height="449" src="https://www.youtube.com/embed/TsM2kmDKf_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						a(href="#modal-video" data-toggle="modal" data-target="#modal-video" data-video=`#video-${i}`)
+							lazyimage(src=`http://www.agenciagv8.com.br/internasgv8/assets/images/video-555x555-${i}.png` alt="nome/descricao" width="555" height="555")
+							.video-caption
+								.type VIDEOS
+								.title Vídeo #{i} Lorem Ipsum
+							//- .video-caption
+					//- .video-thumbnail
+				//- .col-sm-6
+				// FIM REPETE
+		///.row
+
+		.paginacao
+			a(href="#"): i.fa.fa-chevron-left
+			span.active 1
+			a(href="#") 2
+			a(href="#") 3
+			span ...
+			a(href="#") 8
+			a(href="#") 9
+			a(href="#") 10
+			a(href="#"): i.fa.fa-chevron-right
+		//- .paginacao
+	//- .container
+//- main#videos-3.page-videos

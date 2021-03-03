@@ -1,0 +1,184 @@
+main.orcamentos#orcamento-mod-1
+	.page-header
+		.container
+			h1 Orçamento
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span Orçamento
+		//- .container
+	//- .page-header
+	.container
+		.mgb-30
+			h2.titles <svg class="detail-titles" width="1em" height="1em"><use xlink:href="/assets/images/sprites.svg#detail-title" /></svg> SOLICITE SEU ORÇAMENTO
+			p.text-muted Preencha o formulário abaixo, teremos o prazer em atende-lo
+		//- .mgb-30
+
+		//- +alertas
+
+		form.mgb-60
+			.row
+				.col-md-6
+					.md-form.has-success
+						input(type="text" name="nome-orcamento" id="nome-orcamento" value="Fulano de Tal").form-control
+						label(for="nome-orcamento") Digite seu nome #[span.text-danger *]
+						.hover-eff
+					//- .md-form
+				//- .col-md-6
+
+				.col-md-6
+					.md-form.has-error
+						input(type="tel" name="telefone-orcamento" id="telefone-orcamento" value="454gweg").form-control
+						label(for="telefone-orcamento") Digite seu telefone #[span.text-danger *]
+						.hover-eff
+					//- .md-form
+				//- .col-md-6
+			//- .row
+
+			.row
+				.col-md-6
+					.md-form
+						input(type="email" name="email-orcamento" id="email-orcamento").form-control
+						label(for="email-orcamento") Digite seu email #[span.text-danger *]
+						.hover-eff
+					//- .md-form
+				//- .col-md-6
+
+				.col-md-6
+					.md-form
+						.select-custom
+							.input-group
+								input(class="form-control output" disabled)
+								.input-group-append
+									label.btn(for="servico-orcamento")
+										i.fa.fa-chevron-down
+							.drop-options
+								input(type="text" name="filtro" data-target="#options-servico-orcamento" id="servico-orcamento")
+								//- .input-group
+
+								ul.options-list#options-servico-orcamento
+									-for(var p=0;p<4;p++)
+										-var v = p+1;
+
+										li
+											input(type="radio" id=`servico-orcamento-option-${v}` name="servico-orcamento" value=v)
+											label(for=`servico-orcamento-option-${v}`) Serviço #{v}
+										//- li
+								//- ul.options-list
+							//- .drop-options
+						//- .select-custom
+
+						label(for="servico-orcamento") Escolha o tipo de serviço #[span.text-danger *]
+						.hover-eff
+				//- .col-md-6
+			//- .-row
+			.row
+				.col-md-6
+					.md-form
+						-
+							ufs = [
+								['AC' , 'Acre'],
+								['AP' , 'Amapá'],
+								['AM' , 'Amazonas'],
+								['PA' , 'Pará'],
+								['RO' , 'Roraima'],
+								['RR' , 'Rondônia'],
+								['TO' , 'Tocantins'],
+								['AL' , 'Alagoas'],
+								['BA' , 'Bahia'],
+								['CE' , 'Ceará'],
+								['MA' , 'Maranhao'],
+								['PB' , 'Paraíba'],
+								['PE' , 'Pernambuco'],
+								['PI' , 'Piauí'],
+								['RN' , 'Rio Grande do Norte'],
+								['SE' , 'Sergipe'],
+								['DF' , 'Distrito Federal'],
+								['GO' , 'Goiás'],
+								['MT' , 'Mato Grosso'],
+								['MS' , 'Mato grosso do Sul'],
+								['ES' , 'Espirito Santo'],
+								['MG' , 'Minas Gerais'],
+								['RJ' , 'Rio de Janeiro'],
+								['SP' , 'São Paulo'],
+								['PR' , 'Paraná'],
+								['RS' , 'Rio Grande do Sul'],
+								['SC' , 'Santa Catarina']
+							];
+						.select-custom
+							.input-group
+								input(class="form-control output" disabled)
+								.input-group-append
+									label.btn(for="uf-orcamento")
+										i.fa.fa-chevron-down
+							.drop-options
+								input(type="text" name="filtro" data-target="#options-uf-orcamento" id="uf-orcamento")
+								//- .input-group
+
+								ul.options-list#options-uf-orcamento
+									each uf in ufs
+										-var estado = uf[1];
+										-var sigla = uf[0];
+										li
+											input(type="radio" id=`servico-orcamento-option-${sigla}` name="servico-orcamento" value=sigla)
+											label(for=`servico-orcamento-option-${sigla}`) #{estado}
+								//- ul.options-list
+							//- .drop-options
+						//- .select-custom
+						label(for="uf-orcamento") Selecione o estado que reside #[span.text-danger *]
+						.hover-eff
+					//- .md-form
+				//- .col-md-6
+				.col-md-6
+					.md-form
+						.select-custom
+							.input-group
+								input(class="form-control output" disabled)
+								.input-group-append
+									label.btn(for="cidade-orcamento")
+										i.fa.fa-chevron-down
+							//- .input-group
+							.drop-options
+								input(type="text" name="filtro" data-target="#options-cidade-orcamento" id="cidade-orcamento")
+								ul.options-list#options-cidade-orcamento
+									li
+										input(type="radio" id="servico-cidade-option-0" name="servico-cidade" value="São Paulo")
+										label(for=`servico-cidade-option-0`) São Paulo
+									//- li
+									li
+										input(type="radio" id=`servico-cidade-option-1` name="servico-cidade" value='Rio de Janeiro')
+										label(for=`servico-cidade-option-1`) Rio de Janeiro
+									//- li
+								//- ul.options-list#options-cidade-orcamento
+							//- .drop-options
+						//- .select-custom
+						label(for="cidade-orcamento") Selecione a cidade que reside #[span.text-danger *]
+						.hover-eff
+					//- .md-form
+				//- .col-md-6
+			//- .row
+
+			.row.align-items-center
+				.col-md-auto.mgb-15
+					.custom-control.custom-radio
+						input(type="radio" class="custom-control-input" id="pessoa-fisica" name="pessoa-orcamento" checked)
+						label.custom-control-label(for="pessoa-fisica") Pessoa Física
+					//- .custom-control.custom-radio
+				//- .col-md-auto
+				.col-md-auto-85208520-15
+					.custom-control.custom-radio
+						input(type="radio" class="custom-control-input" id="pessoa-juridica" name="pessoa-orcamento")
+						label.custom-control-label(for="pessoa-juridica") Pessoa Jurídica
+					//- .custom-control.custom-radio
+				//- .col-md-auto
+				.col.mgb-15
+					hr
+			//- .row
+
+			.md-form
+				textarea(rows="5" name="msg-orcamento" id="msg-orcamento").form-control
+				label(for="msg-orcamento") Observações
+				.hover-eff
+			//- .md-form
+		//- form
+	//- .container
+//- main.orcamentos#orcamento-mod-1

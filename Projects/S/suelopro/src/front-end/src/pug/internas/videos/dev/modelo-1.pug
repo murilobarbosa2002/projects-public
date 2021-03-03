@@ -1,0 +1,48 @@
+main#videos-1.page-videos
+	.page-header
+		.container
+			h1 Vídeos
+			ul.breadcrumb
+				li: a(href="#") Home
+				li.active: span Vídeos
+		//- .container
+	//- .page-header
+	.container
+		h2.titles Conheça mais sobre nós
+		p Assista abaixo, alguns vídeos de nossa empresa.
+
+		hr.mgt-40.mgb-40
+
+		.row
+			-for(var v=1;v<9;v++)
+				-var d=v;
+				// REPETE
+				.col-lg-3.mgb-30
+					.video-thumb
+						template(id=`video-${v}`)
+							<iframe width="798" height="449" src="https://www.youtube.com/embed/TsM2kmDKf_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						a(href="#modal-video" data-toggle="modal" data-target="#modal-video" data-video=`#video-${v}`)
+							.foto
+								lazyimage(src=`http://www.agenciagv8.com.br/internasgv8/assets/images/videos-mod-1-270x205-${v}.png` width="270" height="205" alt=`Nome do Vídeo #{v}`)
+							//- .foto
+							.nome Nome Teste do Vídeo #{v}
+							.details
+								.duracao Duração #[span 2:45]
+								.data 23/08/2016
+					//- .video-thumb
+				// FIM REPETE
+		//- .row
+
+		.paginacao
+			a(href="#"): i.fa.fa-chevron-left
+			span.active 1
+			a(href="#") 2
+			a(href="#") 3
+			span ...
+			a(href="#") 8
+			a(href="#") 9
+			a(href="#") 10
+			a(href="#"): i.fa.fa-chevron-right
+		//- .paginacao
+	//- .container
+//- main#videos-1.videos

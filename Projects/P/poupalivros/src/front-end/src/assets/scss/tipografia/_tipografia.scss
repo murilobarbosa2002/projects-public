@@ -1,0 +1,29 @@
+@import "_fontfaces";
+
+
+body{
+	font-family: 'Montserrat', var(--font-family-sans-serif, sans-serif);
+}
+
+a{
+	color: inherit;
+}
+
+
+.title-section{
+	margin-bottom: 35px;
+
+	h1{
+		@include font('Montserrat Light');
+		font-size: 16px;
+		margin-bottom: 0;
+		color: var(--color-h1-title-section);
+	}
+
+	h2{
+		@include font('Montserrat Black');
+		font-size: 24px;
+		margin-bottom: 0;
+		color: var(--color-h2-title-section);
+	}
+}

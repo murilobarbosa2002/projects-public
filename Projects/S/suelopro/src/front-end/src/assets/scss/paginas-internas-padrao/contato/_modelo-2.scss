@@ -1,0 +1,90 @@
+.contato-page#contato2{
+	padding-bottom: 80px;
+
+
+	#mapa-contato{
+		padding-bottom: percentage(660/1920);
+		min-height: 200px;
+	}
+
+	.pdt-40{
+		padding-top: 40px;
+	}
+
+	h2{
+		border-bottom: 1px solid currentcolor;
+		margin-bottom: 30px;
+
+		&:after{
+			content:'';
+			display: block;
+			width:60px;
+			height: 2px;
+			background: currentcolor;
+			margin-top:10px;
+		}
+	}
+
+	h3{
+		font-size: 16px;
+		font-weight: bold;
+		color: #000;
+	}
+
+	h4{
+		font-size: 16px;
+		font-weight: bold;
+		color: #000;
+	}
+
+	.info-block{
+		color: #777;
+	}
+
+	.select-custom{
+		.output{
+			position: relative;
+			padding-right: calc(1em + 1.5rem);
+
+			&:before{
+				content:'';
+				display: block;
+				position: absolute;
+				border-left:0.5rem solid transparent;
+				border-right:0.5rem solid transparent;
+				border-top:0.5rem solid currentcolor;
+				right:0.75rem;
+				top:50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	.has-success{
+		.form-control{
+			border-color: materialColor('green','darken-2');
+		}
+	}
+
+	.has-error{
+		.form-control{
+			border-color: materialColor('red','darken-2');
+		}
+	}
+
+	.has-warning{
+		.form-control{
+			border-color: materialColor('orange','darken-2');
+		}
+	}
+
+	.btn-enviar{
+		border-radius: 0;
+		@include button-variant(#61A93E, #61A93E);
+		color: #FFF;
+
+		&:hover{
+			color: #FFF;
+		}
+	}
+}

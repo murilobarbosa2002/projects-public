@@ -1,0 +1,188 @@
+-
+	ufs = [
+		['AC' , 'Acre'],
+		['AP' , 'Amapá'],
+		['AM' , 'Amazonas'],
+		['PA' , 'Pará'],
+		['RO' , 'Roraima'],
+		['RR' , 'Rondônia'],
+		['TO' , 'Tocantins'],
+		['AL' , 'Alagoas'],
+		['BA' , 'Bahia'],
+		['CE' , 'Ceará'],
+		['MA' , 'Maranhao'],
+		['PB' , 'Paraíba'],
+		['PE' , 'Pernambuco'],
+		['PI' , 'Piauí'],
+		['RN' , 'Rio Grande do Norte'],
+		['SE' , 'Sergipe'],
+		['DF' , 'Distrito Federal'],
+		['GO' , 'Goiás'],
+		['MT' , 'Mato Grosso'],
+		['MS' , 'Mato grosso do Sul'],
+		['ES' , 'Espirito Santo'],
+		['MG' , 'Minas Gerais'],
+		['RJ' , 'Rio de Janeiro'],
+		['SP' , 'São Paulo'],
+		['PR' , 'Paraná'],
+		['RS' , 'Rio Grande do Sul'],
+		['SC' , 'Santa Catarina']
+	];
+main.orcamentos#orcamento-mod-3
+	header.page-header
+		.container
+			h1 Solicite seu Orçamento
+
+			ol.breadcrumb
+				li: a(href="#") Home
+				li: span Orçamento
+			//- ol.breadcrumb
+		//- .container
+	//- header.page-header
+	.container
+		.block-note
+			h2 Faça seu orçamento aqui! É simples, rápido e fácil. Sera um prazer atende-lo.
+			p Preencha o formulario abaixo. Em breve retornaremos
+		//- .block-note
+
+		//- #alertas
+		//- 	.alert.alert-success
+		//- 		.media
+		//- 			i.icon-alerta.fas.fa-check-circle
+		//- 			.media-body {{ message.success }}
+		//- 		//- .media
+		//- 		button(type="button" data-dismiss="alert" aria-label="Fechar").close &times;
+		//- 	//- .alert.alert-danger
+
+		//- 	.alert.alert-warning
+		//- 		.media
+		//- 			i.icon-alerta.fas.fa-exclamation-triangle
+		//- 			.media-body {{ message.warning }}
+		//- 		//- .media
+		//- 		button(type="button" data-dismiss="alert" aria-label="Fechar").close &times;
+		//- 	//- .alert.alert-danger
+
+		//- 	.alert.alert-danger
+		//- 		.media
+		//- 			i.icon-alerta.fas.fa-exclamation-triangle
+		//- 			.media-body {{ message.danger }}
+		//- 		//- .media
+		//- 		button(type="button" data-dismiss="alert" aria-label="Fechar").close &times;
+		//- 	//- .alert.alert-danger
+
+		//- 	.alert.alert-info
+		//- 		.media
+		//- 			i.icon-alerta.fas.fa-info-circle
+		//- 			.media-body {{ message.info }}
+		//- 		//- .media
+		//- 		button(type="button" data-dismiss="alert" aria-label="Fechar").close &times;
+		//- 	//- .alert.alert-danger
+		//- //- #alertas
+
+		form
+			.row
+				.col-md-6.col-lg-3
+					.form-group
+						label(for="nome-orcamento").sr-only Nome
+						input(type="text" name="nome-orcamento" id="nome-orcamento" placeholder="Nome").form-control
+					//- .form-group
+				//- .col-md-6.col-lg-3.form-group
+				.col-md-6.col-lg-3
+					.form-group
+						label(for="sobrenome-orcamento").sr-only Sobrenome
+						input(type="text" name="sobrenome-orcamento" id="sobrenome-orcamento" placeholder="Sobrenome").form-control
+					//- .form-group
+				//- .col-md-6.col-lg-3.form-group
+				.col-md-6.col-lg-3
+					.form-group
+						label(for="email-orcamento").sr-only E-mail
+						input(type="email" name="email-orcamento" id="email-orcamento" placeholder="E-mail").form-control
+					//- .form-group
+				//- .col-md-6.col-lg-3.form-group
+				.col-md-6.col-lg-3
+					.form-group
+						label(for="tel-orcamento").sr-only DDD+Telefone
+						input(type="tel" name="tel-orcamento" id="tel-orcamento" placeholder="DDD+Telefone").form-control
+					//- .form-group
+				//- .col-md-6.col-lg-3.form-group
+			//- .row
+
+			.row
+				.col-md-6.col-lg-3
+					.form-group.select-custom
+						label.sr-only(for="uf-orcamento") Estado
+						label(for="uf-orcamento").form-control.output Estado
+
+						.drop-options
+							input(type="text" name="filtro" data-target="#options-uf-orcamento" id="uf-orcamento")
+							ul.options-list#options-uf-orcamento
+								each uf in ufs
+									-var estado = uf[1];
+									-var sigla = uf[0];
+									li
+										input(type="radio" id=`uf-orcamento-option-${sigla}` name="uf-orcamento" value=sigla)
+										label(for=`uf-orcamento-option-${sigla}`) #{estado}
+									//- li
+							//- ul.options-list#options-uf-orcamento
+						//- .drop-options
+					//- .form-group
+				//- .col-md-6.col-lg-3
+				.col-md-6.col-lg-3
+					.form-group.select-custom
+						label.sr-only(for="cidade-orcamento") Cidade
+						label(for="cidade-orcamento").form-control.output Cidade
+
+						.drop-options
+							input(type="text" name="filtro" data-target="#options-cidade-orcamento" id="cidade-orcamento")
+							ul.options-list#options-cidade-orcamento
+								li
+									input(type="radio" id='cidade-orcamento-option-0' name="cidade-orcamento" value='Rio de Janeiro')
+									label(for=`cidade-orcamento-option-0`) Rio de Janeiro
+								//- li
+								li
+									input(type="radio" id='cidade-orcamento-option-1' name="cidade-orcamento" value='São Paulo')
+									label(for=`cidade-orcamento-option-1`) São Paulo
+								//- li
+								li
+									input(type="radio" id='cidade-orcamento-option-2' name="cidade-orcamento" value='Minas Gerais')
+									label(for=`cidade-orcamento-option-2`) Minas Gerais
+								//- li
+							//- ul.options-list#options-uf-orcamento
+						//- .drop-options
+					//- .form-group
+				//- .col-md-6.col-lg-3
+				.col-lg-6
+					.form-group.select-custom
+						label.sr-only(for="servico-orcamento") Qual serviço gostaria de saber?
+						label(for="servico-orcamento").form-control.output Qual serviço gostaria de saber?
+
+						.drop-options
+							input(type="text" name="filtro" data-target="#options-servico-orcamento" id="servico-orcamento")
+							ul.options-list#options-servico-orcamento
+								li
+									input(type="radio" id='servico-orcamento-option-0' name="servico-orcamento" value='Serviço 1')
+									label(for=`servico-orcamento-option-0`) Serviço 1
+								//- li
+								li
+									input(type="radio" id='servico-orcamento-option-1' name="servico-orcamento" value='Serviço 2')
+									label(for=`servico-orcamento-option-1`) Serviço 2
+								//- li
+								li
+									input(type="radio" id='servico-orcamento-option-2' name="servico-orcamento" value='Serviço 3')
+									label(for=`servico-orcamento-option-2`) Serviço 3
+								//- li
+							//- ul.options-list#options-uf-orcamento
+						//- .drop-options
+					//- .form-group
+				//- .col-md-6.col-lg-3
+			//- .row
+
+			.form-group
+				label(for="msg-orcamento").sr-only Observações
+				textarea(name="msg-orcamento" id="msg-orcamento" placeholder="Observações" rows="4").form-control
+			//- .form-group
+
+			button.btn.btn-enviar.btn-expanded SOLICITAR ORÇAMENTO
+		//- form
+	//- .container
+//- main.orcamentos#orcamento-mod-3

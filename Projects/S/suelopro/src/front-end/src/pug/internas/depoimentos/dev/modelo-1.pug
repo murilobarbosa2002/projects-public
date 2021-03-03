@@ -1,0 +1,60 @@
+main.depoimentos#depoimento-mod-1(style="background-image: url(http://www.agenciagv8.com.br/internasgv8/assets/images/bg-depoimentos.png)")
+	.page-header
+		.container
+			h1 Depoimentos
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span Depoimentos
+		//- .container
+	//- .page-header
+	.container
+		.carousel#carouselDepoimento.slide(data-interval="5000")
+			.detalhe
+				lazyimage(src="http://www.agenciagv8.com.br/internasgv8/assets/images/comentario-aspas.png" alt="")
+			//- .detalhe
+			.carousel-inner
+
+				// REPETE
+				.carousel-item.active
+					.depoimento
+						figure.avatar
+							lazyimage(src="http://www.agenciagv8.com.br/internasgv8/assets/images/avatar-depoimento.jpg" alt="Jane Mage" width="160" height="160")
+						//- .avatar
+
+						.mgb-30
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						//- .mgb-20
+
+						.autor
+							p #[i(style="color: #999;") by:] #[i(style="font-size:20px") Jane Mage]
+							p DIRETORA EXECUTIVA - #[strong NOME DA EMPRESA]
+					//- .depoimento
+				//- .carousel-item
+				// FIM REPETE
+
+				// REPETE
+				.carousel-item
+					.depoimento
+						figure.avatar
+							lazyimage(src="http://www.agenciagv8.com.br/internasgv8/assets/images/avatar-depoimento2.jpg" alt="Jane Mage" width="160" height="160")
+						//- .avatar
+
+						.mgb-30
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						//- .mgb-20
+
+						.autor
+							p #[i(style="color: #999;") by:] #[i(style="font-size:20px") Jane Sorcerer]
+							p DIRETORA EXECUTIVA - #[strong NOME DA EMPRESA]
+					//- .depoimento
+				//- .carousel-item
+				// FIM REPETE
+
+			//- .carousel-inner
+			.ctrls
+				a(href="#carouselDepoimento" data-slide="prev").controls: i.fa.fa-chevron-left
+				a(href="#carouselDepoimento" data-slide="next").controls: i.fa.fa-chevron-right
+			//- .ctrls
+		//- .carousel#carouselDepoimento
+	//- .container
+//- main.depoimentos#depoimento-mod-1

@@ -1,0 +1,26 @@
+@function color-variant($name: 'red', $color: red){
+    $colors: ();
+    $mount: 8%;
+
+    @for $i from 4 through 1 {
+        $colors: map-merge($colors, (#{$name}-darken-#{$i} : darken($color, ($mount * $i))))
+    }
+
+    $colors: map-merge($colors, (#{$name}: $color));
+
+    @for $i from 1 through 4 {
+        $colors: map-merge($colors, (#{$name}-lighten-#{$i} : lighten($color, ($mount * $i))))
+    }
+
+    @return $colors;
+}
+
+@function allcolors-variantion($cores){
+    $allColors: ();
+
+    @each $color, $value in $cores {
+        $allColors: map-merge($allColors, color-variant($color, $value));
+    }
+
+    @return $allColors;
+}

@@ -1,0 +1,22 @@
+.icon{
+	background-image: url('#{$imgs}/sprite.png');
+	background-repeat:no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	background-size: {{this.spritesheet.width}}px {{this.spritesheet.height}}px;
+	
+	{{#each this.sprites}}
+	&.{{this.name}}{
+		width: {{this.width}}px;
+		height: {{this.height}}px;
+		background-position: {{this.offset_x}}px {{this.offset_y}}px;
+	}
+	{{/each}}
+}
+
+
+{{!-- @media ( -webkit-min-device-pixel-ratio: 2 ), (min-resolution: 192dpi) {
+	.icon{
+		background-image: url(#{$imgs}/sprite@2x.png);
+	}
+} --}}

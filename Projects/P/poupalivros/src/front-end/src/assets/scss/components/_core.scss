@@ -1,0 +1,19 @@
+:root{
+	--font-fallback: var(--font-family-sans-serif);
+}
+
+.sprite-svg-area{
+	height: 0;
+	overflow: hidden;
+}
+
+
+#app{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	.wrapper{
+		flex-grow: 1;
+	}
+}

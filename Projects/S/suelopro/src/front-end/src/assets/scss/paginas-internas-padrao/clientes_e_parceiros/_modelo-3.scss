@@ -1,0 +1,88 @@
+#clientes-e-parceiros-mod-3{
+
+	.cliente{
+		padding-bottom:30px;
+		margin-bottom:30px;
+		border-bottom: 12px solid rgba(#000,0.1);
+
+		figure{
+			margin-bottom:10px;
+		}
+
+		img{
+			border:1px solid rgba(#000,0.2);
+			background:#FFF;
+			padding:10px;
+		}
+
+		.nome{
+			text-align: left;
+			margin-top:0;
+			overflow:hidden;
+			margin-bottom:15px;
+			font-family: 'OFFISFB';
+
+			span{
+				display: inline-block;
+				position: relative;
+
+				&:before{
+					content:'';
+					display:block;
+					border:1px solid rgba(#000,.2);
+					left:100%;
+					margin-left:30px;
+					top:calc(50% - 1px);
+					width:100vw;
+					position:absolute;
+				}
+			}
+
+			&:after{
+				content:'';
+				background: currentcolor;
+				opacity:0.9;
+				display:block;
+				width:2em;
+				height:4px;
+				margin-top:5px;
+			}
+		}
+	}
+
+	.paginacao{
+		display: flex;
+		justify-content:center;
+		color: #E40015;
+
+		& > *{
+			margin:0;
+			padding:0.3em 0.9em;
+
+			&:first-child{
+				border-radius:2em 0 0 2em;
+				border-right-width:0;
+
+				& ~ *{
+					border-left:none;
+					border-right-width:0;
+				}
+			}
+
+			&:last-child{
+				border-radius:0 2em 2em 0;
+				border-right-width:2px !important;
+			}
+
+			&:hover{
+				color: #E40015;
+			}
+		}
+		
+		.active{
+			background:#E40015;
+			border-color:#E40015;
+			color:#FFF;
+		}
+	}
+}

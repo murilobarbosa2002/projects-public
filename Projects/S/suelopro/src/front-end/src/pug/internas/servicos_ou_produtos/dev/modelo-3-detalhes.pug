@@ -1,0 +1,53 @@
+main.produtos-servicos#produtos-mod-3.detalhes
+	
+	.page-header
+		.container
+			h1 PRODUTOS
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span PRODUTOS
+		//- .container
+	//- .page-header
+	.container
+		.row
+			.col-lg-6.order-lg-2.mgb-30
+				p #[a(href="#") #[i.fa.fa-caret-left] voltar a listagem de produtos]
+				.box.box-white
+					h2.subtitle-produtos This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh
+					hr
+					p This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.
+					hr
+
+					p: i(style="font-size:18px") Gostou? Então compartilhe!
+
+					.midias-sociais
+						a(href="#"): i.fa.fa-facebook
+						a(href="#"): i.fa.fa-twitter
+						a(href="#"): i.fa.fa-linkedin
+						a(href="#"): i.fa.fa-google-plus
+				//- .box.box-white
+			//- .col-lg-6
+
+			.col-lg-6.order-lg-1.mgb-30
+				p Nome do Produto Teste #[i.fa.fa-angle-double-right] Especificações
+
+				.box.box-white#imagens-produto
+					.image-g
+						a(href="http://placehold.it/1000x1000" data-lightbox="produto" title="nome/descricao")
+							lazyimage(src="http://placehold.it/515x515" alt="nome/descricao" width="515" height="515")
+					//- .image-g
+
+					.album
+						a(href="#album" data-owl="prev").fa.fa-chevron-left.owl-ctrls
+						#album.owl-carousel(data-sm="2" data-md="3" data-lg="5" data-margin="10")
+							-for(var p=0;p<5;p++)
+								// repete
+								a(href="http://placehold.it/1000x1000" data-lightbox="produto" title="nome/descricao")
+									lazyimage(src="http://placehold.it/61x61" alt="nome/descricao" width="61" height="61")
+								// fim repete
+						a(href="#album" data-owl="prev").fa.fa-chevron-right.owl-ctrls
+				//- .box.box-white
+			//- .col-lg-6
+		//- .row
+	//- .container
+//- main.produtos-servicos#produtos-mod-3

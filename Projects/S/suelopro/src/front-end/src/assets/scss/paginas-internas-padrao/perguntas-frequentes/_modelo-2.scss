@@ -1,0 +1,90 @@
+#perguntas-2 {
+	padding-bottom: 80px;
+
+	h2{
+		font-size: 20px;
+		font-weight: 300;
+
+		&:after{
+			content:'';
+			display: block;
+			width: 120px;
+			height:5px;
+			background: #9D192B;
+			margin-top:10px;
+		}
+	}
+
+	.box-perguntas{
+		padding: 90px 40px 30px 40px;
+		background: #eeeeee;
+	}
+
+	.aprentar-pergunta{
+		width: 426px;
+		max-width: calc(100% - 15px);
+		margin-bottom: -90px;
+		position: relative;
+		z-index: 2;
+		margin-left: auto;
+		margin-right: 15px;
+
+		&:before{
+			content:'';
+			display: block;
+			padding-bottom: percentage(264/426);
+			background: url(../images/apresentar-pergunta.png);
+		}
+	}
+
+	.box-perguntas-content{
+		max-height: 500px;
+		overflow: auto;
+		padding-right: 20px;
+
+		&::-webkit-scrollbar {
+			width: 7px;
+		  	border-radius: 10px;
+		}
+		/* Track */
+		&::-webkit-scrollbar-track {
+		  	background: #FFF; 
+		  	border-radius: 10px;
+		}
+
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+		  	background: #932025;
+		  	border-radius:10px;
+		}
+
+		/* Handle on hover */
+		&::-webkit-scrollbar-thumb:hover {
+		  	background: darken(#932025, 10%); 
+		}
+	}
+
+	.pergunta-faq{
+		padding-left: 20px;
+
+		.pergunta{
+			color: #932025;
+			position: relative;
+			font-size: 20px;
+
+			&:before{
+				content: fa-content($fa-var-angle-right);
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 900;
+				display: block;
+				width:20px;
+				margin-left: -20px;
+				float: left;
+			}
+		}
+	}
+
+	.pergunta-faq + .pergunta-faq{
+		margin-top: 30px;
+	}
+}

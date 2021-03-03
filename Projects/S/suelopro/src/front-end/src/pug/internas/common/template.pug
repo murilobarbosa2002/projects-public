@@ -1,0 +1,87 @@
+doctype html
+html(lang="pt-br")
+	head
+		block title
+			-var title = 'Internas GV8';
+		title #{title}
+
+		meta(charset="utf-8")
+		meta(http-equiv="x-ua-compatible", content="ie=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="description", content="WSK")
+
+		meta(name="msapplication-tap-highlight" content="no")
+		
+		block theme
+			-var theme = "#9D192B";
+
+		// color da status bar
+		meta(name="msapplication-TileColor", content=theme)
+		meta(name="theme-color", content=theme)
+		meta(name="apple-mobile-web-app-status-bar-style", content=theme)
+
+		// add to homescreen (chrome)
+		meta(name="mobile-web-app-capable" content="yes")
+		meta(name="application-name" content=title)
+
+		// add to homescreen (iOS)
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(name="apple-mobile-web-app-title" content=title)
+
+		base(href="../../")
+
+		// SEO
+		// <link rel="canonical" href="https://www.dominio.com.br/">
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+		link(rel="stylesheet", type="text/css", href="assets/css/lightbox.min.css")
+		link(rel="stylesheet", type="text/css", href="assets/css/estilos.css")
+		link(rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico")
+
+
+		include mixins/mixins.pug
+
+	body
+		noscript
+			style .alert-warning{border-radius:0;background: #FFB300;position: sticky;z-index:1000;top:0}
+			.alert.alert-warning.text-center.alert-noscript(role="alert")
+				h1 Seu navegador está com os scripts desabilitados!
+				p Para melhor funcionamento do site, habilite-os.
+		//- noscript
+		
+		// ADD APENAS QUANDO HOUVER O PLUGIN DO FACEBOOK
+		#fb-root
+		script window.addEventListener('load', function(){var fbJS = document.createElement('script');fbJS.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2';document.body.appendChild(fbJS)})
+		// FIM ADD APENAS QUANDO HOUVER O PLUGIN DO FACEBOOK
+
+		//
+			[if lt IE 9]>
+				<style>.msg-ie{border-radius:0; background: #FFB300; position: sticky; z-index:1000; top:0;}</style>
+				<div class="alert alert-warning msg-ie text-center" role="alert">
+					<button class="close" type="button" aria-label="Close" data-dismiss="alert">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="h1 alert-heading">Atenção!!!</h4>
+					<p> O seu navegador está desatualizado! Para melhor funcionamento do site clique <a href="https://support.microsoft.com/pt-br/help/17621/internet-explorer-downloads" class="alert-link">aqui</a> para atualizar, ou instale o <a href="https://www.google.com/chrome/browser/desktop/index.html" class="alert-link">Google Chrome</a> </p>
+				</div>
+			<![endif]
+		#app
+			button.btn.btn-dark(style="position: fixed;z-index:3000;right:15px;top:15px;" onclick="javascript:history.back()") #[i.fas.fa-chevron-left] Voltar
+			include header.pug
+			.wrapper
+				block content
+			// /.wrapper
+			include footer.pug
+		//- #app
+
+		script(src="assets/js/jquery.min.js")
+		script(src="assets/js/bootstrap.min.js")
+		script(src="assets/js/owl.carousel.min.js")
+		script(src="assets/js/lightbox.min.js")
+		script(src="assets/js/scripts.js")
+
+		block scripts
+
+		// SCRIPT DA PAGINA DE EXEMPLO. Essse aqui é descartável, 
+		script $('.btn-helper').popover({content:' ',trigger: 'focus',placement: 'bottom'}); $('.btn-helper').on('inserted.bs.popover', function(e){var id = $(this).attr('aria-describedby');$('#'+id+' .popover-body').html('Este topo é <strong>meramente ilustrativo</strong>, <br> aqui será o <strong>topo do seu site</strong>')})
+

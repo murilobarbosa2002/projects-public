@@ -1,0 +1,10 @@
+@mixin line-clamp($linhas: 2){
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $linhas;
+}
+
+.line-clamp-2{
+	@include line-clamp(2);
+}

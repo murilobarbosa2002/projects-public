@@ -1,0 +1,103 @@
+main#modelo-3.empresa
+	.page-header
+		.container
+			h1 Sobre Nós
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span Sobre Nós
+		//- .container
+	//- .page-header
+	.container
+		.row.mgb-40
+			.col-lg-6.mgb-30
+				.mgb-40
+					h2.title Nossa História
+					p Conheça nossa tragetória, missão, visão e valores de nossa empresa.
+				//- .mgb-40
+
+				.clearfix
+					p(style="text-align:justify") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt corrupti enim laudantium odit eos facere explicabo vero repudiandae temporibus iusto molestiae aliquid, mollitia quisquam vel at earum numquam sint!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt corrupti enim laudantium odit eos facere explicabo vero repudiandae temporibus iusto molestiae aliquid, mollitia quisquam vel at earum numquam sint!
+					p(style="text-align:justify") Lorem ipsum #[strong dolor] sit amet, consectetur adipisicing elit. Consectetur deserunt corrupti enim laudantium odit eos facere explicabo vero repudiandae temporibus iusto molestiae aliquid, mollitia quisquam vel at earum numquam sint!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt corrupti enim laudantium odit eos facere explicabo vero repudiandae temporibus iusto molestiae aliquid, mollitia quisquam vel at earum numquam sint!
+					p(style="text-align:justify") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt corrupti enim laudantium odit eos facere explicabo vero repudiandae temporibus iusto molestiae aliquid, mollitia quisquam vel at earum numquam sint!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt corrupti enim laudantium odit eos facere explicabo vero repudiandae temporibus iusto molestiae aliquid, mollitia quisquam vel at earum numquam sint!
+				//- .clearfix
+			.col-lg-6
+				.carousel#carousel-empresa(data-interval="0")
+					.carousel-wrapper
+						.carousel-inner
+							.carousel-item.active
+								a(href="http://placehold.it/1000x706" data-lightbox="empresa" title="Lorem Ipsum 1")
+									lazyimage(src="http://placehold.it/850x600" width="850" height="600" alt="Lorem Ipsum 1")
+							//- .carousel-item
+							.carousel-item
+								a(href="http://placehold.it/1000x706/1F44F1/FFF" data-lightbox="empresa" title="Lorem Ipsum 1")
+									lazyimage(src="http://placehold.it/850x600/1F44F1/FFF" width="850" height="600" alt="Lorem Ipsum 1")
+							//- .carousel-item
+							.carousel-item
+								a(href="http://placehold.it/1000x706/F11F43/FFF" data-lightbox="empresa" title="Lorem Ipsum 1")
+									lazyimage(src="http://placehold.it/850x600/F11F43/FFF" width="850" height="600" alt="Lorem Ipsum 1")
+							//- .carousel-item
+						//- .carousel-inner
+						// printar apenas quando houver 3 ou mais itens
+						a(href="#carousel-empresa" data-slide="prev" aria-label="prev").prev: i.fas.fa-chevron-left
+						a(href="#carousel-empresa" data-slide="next" aria-label="next").next: i.fas.fa-chevron-right
+						// Fim printar apenas quando houver 3 ou mais itens
+					
+					// Só printar caso numero de itens seja >= 2
+					ol.carousel-indicators
+						li(data-target="#carousel-empresa" data-slide-to="0").active
+							lazyimage(src="http://placehold.it/395x279" width="395" height="279" alt="Lorem Ipsum 1")
+						li(data-target="#carousel-empresa" data-slide-to="1")
+							lazyimage(src="http://placehold.it/395x279/1F44F1/FFF" width="395" height="279" alt="Lorem Ipsum 1")
+						li(data-target="#carousel-empresa" data-slide-to="2")
+							lazyimage(src="http://placehold.it/395x279/F11F43/FFF" width="395" height="279" alt="Lorem Ipsum 1")
+					// FIM Só printar caso numero de itens seja >= 2
+				//- .carousel#carousel-empresa(data-interval="0")
+			//- .col-lg-6
+		//- .row
+
+		hr
+
+		.row
+			.col-lg-4.mgb-40
+				.missao-visao-valores
+					lazyimage(src="assets/images/missao-151x149.png" width="151" height="149" alt="Missão")
+					.titulo NOSSA #[span MISSÃO]
+					.desc
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti et doloremque, rem illum sit similique adipisci repellat nihil nesciunt blanditiis fugiat tempora eius, libero sapiente, quisquam magni eos voluptas nemo?
+				//- .missao-visao-valores
+			//- .col-xl-4
+
+			.col-lg-4.mgb-40
+				.missao-visao-valores
+					lazyimage(src="assets/images/visao-151x149.png" width="151" height="149" alt="Missão")
+					.titulo NOSSA #[span VISÃO]
+					.desc
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti et doloremque, rem illum sit similique adipisci repellat nihil nesciunt blanditiis fugiat tempora eius, libero sapiente, quisquam magni eos voluptas nemo?
+				//- .missao-visao-valores
+			//- .col-xl-4
+
+			.col-lg-4.mgb-40
+				.missao-visao-valores
+					lazyimage(src="assets/images/valores-151x149.png" width="151" height="149" alt="Missão")
+					.titulo NOSSOS #[span VALORES]
+					.desc
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti et doloremque, rem illum sit similique adipisci repellat nihil nesciunt blanditiis fugiat tempora eius, libero sapiente, quisquam magni eos voluptas nemo?
+				//- .missao-visao-valores
+			//- .col-xl-4
+		//- .row
+	//- .container
+	.depoimento
+		.container
+			.fas.fa-quote-left
+			h2 "Comprometimento, eficiência, pontualidade, viabilidade, mão de obra qualificada para execução dos serviços e a satisfação de nossos clientes é a nossa marca”.
+
+			.autor
+				.avatar
+					lazyimage(src="assets/images/avatar-depoimento.jpg" alt="Fulana de Tal" width="80" height="80")
+				//- .avatar
+				.nome Fulana de Tal
+				.cargo Diretor Executivo
+			//- .autor
+		//- .container
+	//- .depoimentos
+//- main#qm-somos-3.empresa

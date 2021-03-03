@@ -1,0 +1,53 @@
+$imgs: '../images';
+$fonts: '../fonts';
+
+// MEDIA BREAKPOINTS
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// TAMANHOS DO CONTAINER
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 970px,
+  xl: 1170px
+) !default;
+
+// faixa topo com telefone, whatsapp, etc
+$bg-faixa-telefone-topo: #bd1e33;
+$color-faixa-telefone-topo: #FFF;
+
+// MOBILE CONTROLS---------------------
+$bg-mobile-controls: #e4e4e4;
+$color-mobile-controls: #222;
+
+// btn toggle menu mobile
+$bg-btn-toggle-menu: #E3E3E3;
+$color-btn-toggle-menu: #222;
+
+$bg-btn-toggle-menu-hover: darken(#E3E3E3, 10%);
+$color-btn-toggle-menu-hover: #222;
+
+// MENU
+$bg-main-menu: #e4e4e4;
+$bg-menu-ativo: #C20036;
+$bg-menu-mobile-ativo: #C20036;
+$color-menu-mobile-ative:#FFF;
+
+// NEWSLETER
+$color-newsletter: #FFF;
+$bg-newsletter: #333333;
+
+$bg-btn-newsletter: #bd1e33;
+$color-btn-newsletter: #FFF;
+$bg-btn-newsletter-hover: darken(#bd1e33, 10%);
+$color-btn-newsletter-hover: #FFF;
+
+$detalhe-page-header-internas: #bd1e33;
+$bg-empresa-internas: #333;
+$detalhe-produt-hover-modelo-3: #bd1e33;

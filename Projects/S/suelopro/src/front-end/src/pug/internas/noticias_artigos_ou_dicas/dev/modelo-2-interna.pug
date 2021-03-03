@@ -1,0 +1,71 @@
+main.noticias#modelo-2
+	.page-header
+		.container
+			h1 Notícias
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span Notícias
+		//- .container
+	//- .page-header
+
+	.container
+		h2.title: span Últimas Notícias
+
+		.row
+			.col-lg-7
+				article.noticia-detalhe
+					.header
+						.postado Postado em: 17/01/2019
+						h2.titulo Título da Notícia Teste Lorem Ipsum in Dolor Set Only Example Editable Text.
+						h3.subtitulo Subtítulo exemplo This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit.
+					//- .header
+					.content
+						
+						img(src="http://placehold.it/850x500", alt="Nome/descricao" style="margin-bottom:30px")
+						p(style="text-align:justify") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat sit excepturi veniam quo eligendi eos id animi laboriosam, ipsam consectetur at cupiditate molestias, vel blanditiis perferendis porro earum amet optio!
+						p(style="text-align:justify") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat sit excepturi veniam quo eligendi eos id animi laboriosam, ipsam consectetur at cupiditate molestias, vel blanditiis perferendis porro earum amet optio!
+						img(src="http://placehold.it/250x180" style="float:left;margin:15px 30px 15px 0")
+						p(style="text-align:justify") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat sit excepturi veniam quo eligendi eos id animi laboriosam, ipsam consectetur at cupiditate molestias, vel blanditiis perferendis porro earum amet optio!
+						p(style="text-align:justify") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat sit excepturi veniam quo eligendi eos id animi laboriosam, ipsam consectetur at cupiditate molestias, vel blanditiis perferendis porro earum amet optio! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					//- .content
+					.footer
+						.row.align-items-center
+							.col-md.compartilhe Gostou? #[strong Então Compartilhe!]
+							.col-md-auto.redes-sociais
+								a(href="#").fab.fa-facebook
+								a(href="#").fab.fa-twitter
+								a(href="#").fab.fa-instagram
+								a(href="#").fab.fa-pinterest-p
+						//- .row
+					//- .footer
+				//- .noticia-detalhe
+			//- .col-lg-7
+
+			.col-lg-5.mgb-30
+				section.card.veja-tambem
+					.card-header
+						h2 Veja também
+						p Veja abaixo as atualidades da Nome da Empresa
+					.card-body
+						-for(let m=0;m<5;m++)
+							-var n = m+1;
+							// REPETE
+							.noticia-thumb
+								a(href="#")
+									article.media
+										.foto
+											lazyimage(src="http://placehold.it/100x100" width="100" height="100" alt="nome/descricao")
+										.media-body
+											h3 Título da notícia teste lorem ipsum dolor set, only example and text in again version photoshop.
+											.publicado 14/01/2019
+									//- .media
+							// FIM REPETE
+
+						a(href="#").btn.btn-block.btn-todas-noticias ver todas notícias #[i.fas.fa-angle-double-right]
+				//- .card
+
+				div(class="fb-page" data-href="https://www.facebook.com/gv8website" data-width="500" data-height="240" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true")
+			//- .col-lg-5
+		//- .row
+	//- .container
+//- main.noticias#modelo-2

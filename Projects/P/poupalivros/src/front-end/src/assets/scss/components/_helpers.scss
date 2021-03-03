@@ -1,0 +1,22 @@
+// Margins
+@include margin-variant(30);
+@include margin-variant(40);
+@include margin-variant(60);
+@include margin-variant(70);
+
+[data-owl]{
+
+	&:not(.ready){
+		display: none;
+	}
+
+	&.disabled{
+		cursor: not-allowed;
+		opacity: 0.6;
+	}
+}
+
+.svg-icon{
+	width: 1em;
+	height: 1em;
+}

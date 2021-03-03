@@ -1,0 +1,143 @@
+#qm-somos-1{
+
+	.page-header{
+		font-family: 'Roboto';
+
+		h1{
+			font-family: 'Roboto';
+			font-weight: 900;
+		}
+	}
+
+	h1,h2,h3,h4,h5,h6,
+	.h1,.h2,.h3,.h4,.h5,.h6{
+		font-family: 'OFFISFW';
+	}
+
+	@include media-breakpoint-up(lg){
+		.title-sobre{
+			width: 540px;
+			max-width: 50%;
+		}
+	}
+
+	.tragetoria{
+		background: #F6F6F6;
+		padding: 60px 0;
+		margin-top: 60px;
+	}
+
+	.title-tragetoria{
+		text-align: center;
+		font-family: 'OFFISFB';
+		font-size: 50px;
+
+		@include media-breakpoint-down(sm){
+			font-size: 30px;
+		}
+
+		span{
+			display: block;
+			color: #2A2A2A;
+			font-size: 20px;
+			font-family: 'OFFISFW';
+		}
+
+		.icon{
+			position: relative;
+
+			&:before,
+			&:after{
+				content:'';
+				width:85px;
+				position:absolute;
+				top: calc(50% - 0.5px);
+				border-top:1px dashed currentcolor;
+			}
+
+			&:before{
+				right:100%;
+				margin-right: 10px;
+			}
+
+			&:after{
+				left:100%;
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.trajeto{
+		text-align: center;
+	}
+
+	.trajeto-title{
+		font-family: 'OFFISFB';
+		font-size: 20px;
+		margin-bottom: 10px;
+		position: relative;
+		padding:0 10px;
+
+		&:before,
+		&:after,
+		.detail:before,
+		.detail:after{
+			content:'';
+			display: block;
+			width:5px;
+			height:5px;
+			position:absolute;
+		}
+
+		&:before,
+		&:after{
+			left:0;
+		}
+
+		.detail:before,
+		.detail:after{
+			right:0;
+		}
+
+		&:before,
+		.detail:before{
+			background: $red;
+			top:0.3em;
+		}
+
+		&:after,
+		.detail:after{
+			background: currentcolor;
+			bottom:0.3em;
+		}
+	}
+
+	.trajeto-content{
+		color: #888888;
+	}
+
+	.missao-visao-valores{
+		text-align: center;
+
+		.block{
+			lazyimage,
+			.lazyimage{
+				margin-bottom: 20px;
+				margin-right:auto;
+				margin-left:auto;
+			}
+			
+			.title{
+				margin-bottom: 10px;
+				color: $red;
+				font-family: 'OFFISFW';
+				font-size: 20px;
+
+				span{
+					font-family: 'OFFISFB';
+					font-size: 2em;
+				}
+			}
+		}
+	}
+}

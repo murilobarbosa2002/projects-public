@@ -1,0 +1,40 @@
+footer.rodape
+	.container
+		.brand
+			lazy-image(src="assets/images/logo-footer.webp" alt="Seu Logo" style="--width: 326;--height: 45;")
+		//- .brand
+
+		.row.justify-content-center
+			.col-xl-6.televendas.mgb-30
+				h2.title-footer TELEVENDAS:
+				ul.telefones
+					li: a(href="tel:9999999-9999") (99) 9 99999-9999
+					li: a(href="tel:999999-9999") (99) 99999-9999
+			//- .col-xl-6
+
+			.col-xl-6.atendimento.mgb-30
+				h2.title-footer ATENDIMENTO:
+				ul.emails
+					li: a(href="mailto:contato@dominio.com.br") contato@dominio.com.br
+			//- .col-xl-6
+		//- .row.justify-content-center
+
+		.redes-sociais
+			.title SIGA-NOS:
+			.content
+				a(href="#" target="_blank" rel="noopener" title="Facebook").fab.fa-facebook-f
+				a(href="#" target="_blank" rel="noopener" title="Instagram").fab.fa-instagram
+				a(href="#" target="_blank" rel="noopener" title="Pinterest").fab.fa-pinterest-p
+				a(href="#" target="_blank" rel="noopener" title="Twitter").fab.fa-twitter
+			//- .content
+		//- .redes-sociais
+	//- .container
+
+	.creditos
+		.container
+			| NOME DA EMPRESA  © Todos os direitos reservados. Implementação de conteúdo e material fornecidos pelo administrador.
+			br
+			| Criação de Sites: #[a(href="https://gv8.com.br" target="_blank" rel="noopener") GV8 Sites & Sitemas <svg class="gv8"><use xlink:href="#gv8"/></svg>]
+		//- .container
+	//- .creditos
+//- footer

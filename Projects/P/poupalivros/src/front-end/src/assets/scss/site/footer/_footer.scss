@@ -1,0 +1,101 @@
+.rodape{
+	border-top: var(--border-top-rodape, none);
+	padding-top: 45px;
+	background: var(--bg-rodape, #333);
+	color: var(--color-rodape, #FFF);
+
+	.brand{
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	ul{
+		list-style: none;
+		display: inline-block;
+		max-width: 100%;
+		padding-left: 0;
+		margin-bottom: 0;
+
+		a{
+			display: inline-block;
+			max-width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			vertical-align: middle;
+		}
+	}
+
+	.title-footer{
+		font-size: 16px;
+		@include font('Montserrat Bold');
+	}
+
+	.telefones{
+		columns: 2;
+		column-rule: 1px solid currentcolor;
+		text-align: center
+	}
+
+	.redes-sociais{
+		text-align: center;
+
+		.content{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			& > *{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 2em;
+				height: 2em;
+				border-radius: 50%;
+				color: var(--bg-rodape, #333);
+				background: var(--color-rodape, #FFF);
+				margin: 10px;
+				transition: all 0.3s linear;
+
+				&:hover{
+					background: var(--color-rodape-link-hover, $theme);
+					color: var(--bg-rodape, #333);
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		.televendas{
+			text-align: right;
+			border-right: 1px solid rgba(#000,0.3);
+		}
+
+		.atendimento{
+			border-left: 1px solid rgba(#000,0.3);
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		text-align: center;
+	}
+}
+
+
+.creditos{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: var(--bg-creditos, #333);
+	color: var(--color-creditos, #FFF);
+	border-top: var(--border-creditos, none);
+	margin-top: 30px;
+	font-size: 12px;
+	text-align: center;
+	@include font('Montserrat Light');
+}
+
+.gv8{
+	width: toEm(44,12);
+	height: toEm(24,12);
+}

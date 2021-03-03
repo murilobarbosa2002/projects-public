@@ -1,0 +1,48 @@
+.lazy-embed{
+	--width: 1920;
+	--height: 1080;
+
+	position: relative;
+	width: calc(var(--width) * 1px);
+	max-width: 100%;
+	max-height: calc(var(--height) * 1px);
+	overflow: hidden;
+	background: #DDD;
+
+	&:before{
+		content:'';
+		display: block;
+		padding-bottom: calc( (var(--height) / var(--width)) * 100%);
+	}
+
+	&:not(.loaded):after{
+		content:'';
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		left: calc(50% - 15px);
+		top: calc(50% - 15px);
+		border: 3px solid $primary;
+		border-left-color: transparent;
+		border-radius: 50%;
+		animation: loadingLazyElements 1s linear infinite;
+		transition: opacity 0.6s;
+	}
+
+	iframe{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		border: none;
+		opacity: 0;
+		transition: opacity 0.6s linear;
+	}
+
+	&.loaded {
+		iframe{
+			opacity: 1;
+		}
+	}
+}

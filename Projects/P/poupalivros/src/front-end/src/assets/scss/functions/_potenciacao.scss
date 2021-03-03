@@ -1,0 +1,11 @@
+@function potencia($num: 1, $potencia: 1){
+	$n: $num;
+
+	@if $potencia > 1 {
+		@for $i from 1 through ($potencia - 1) {
+			$n: $n * $num;
+		}
+	}
+
+	@return $n;
+}

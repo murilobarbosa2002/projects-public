@@ -1,0 +1,44 @@
+mixin link-util(n,r)
+	li.link-util
+		a(href="#" title=`Lorem Ipsum ${r}` target="blank")
+			lazyimage(src=`assets/images/logo-placeholder-${n}.png` alt=`Lorem Ipsum ${r}` width="200" height="200")
+	//- .link-util
+main.links-uteis#modelo-2
+	.page-header
+		.container
+			h1 Links Úteis
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span Links Úteis
+		//- .container
+	//- .page-header
+	.container
+		.mgb-60.text-center
+			h2 Aproveite e acesse também
+			p Separamos os melhores sites para você ter a melhor navegação
+
+		.links-uteis
+			ul.content
+				-var r=1;
+				-for(var c=0;c<4;c++)
+					-var  n=c+1;
+					// REPETE
+					+link-util(n,r)
+					// REPETE
+					-r++;
+				-for(var d=4;d>0;d--)
+					// REPETE
+					+link-util(d,r)
+					// REPETE
+					-r++;
+				-for(var c=0;c<4;c++)
+					-var  n=c+1;
+					// REPETE
+					+link-util(n,r)
+					// REPETE
+					-r++;
+
+			//- .content
+		//- .links-uteis
+	//- .container
+//- main.links-uteis#modelo-2

@@ -1,0 +1,67 @@
+main.noticias#modelo-1
+	.page-header
+		.container
+			h1 Notícias
+
+			ol.breadcrumb
+				li: a(href="index.html") HOME
+				li.active: span Notícias
+			//- ol.breadcrumb
+		//- .container
+	//- .page-header
+
+	.container
+		.row
+			.col-lg-8.col-xl-9.col-md-7
+				-for(var c=0;c<4;c++)
+					-var n=c+1;
+					// repete
+					article.noticia
+						figure.foto
+							a(href="http://www.agenciagv8.com.br/internasgv8/internas/noticias_artigos_ou_dicas/modelo-1-interna.html")
+								lazyimage(src="http://placehold.it/350x200/0357C5/FFF" alt="Título da notícia" width="350" height="200")
+						//- .foto
+
+						.content
+							a(href="http://www.agenciagv8.com.br/internasgv8/internas/noticias_artigos_ou_dicas/modelo-1-interna.html")
+								.publicado #[i.fa.fa-calendar] há 2 horas
+								h2.title-noticia Título da notícia #{n} teste lorem ipsum dolor set, only example and text in again version photoshop.
+								.desc
+									p(style="text-align: justify") This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+								//- .desc
+
+							.redes-sociais
+								a(href="#" target="_blank" title="facebook").fab.fa-facebook-f
+								a(href="#" target="_blank" title="twitter").fab.fa-twitter
+								a(href="#" target="_blank" title="instagram").fab.fa-instagram
+							//- .redes-sociais
+						//- .content
+					//- article.noticia
+					// fim repete
+
+				.paginacao
+				//- .paginacao
+			//- .col-lg-8
+
+			.col-lg-4.col-xl-3.col-md-5
+
+				.card.mais-lidas
+					.card-header MAIS LIDAS
+					-for(let m=0;m<5;m++)
+						-var n = m+1;
+						// REPETE
+						article.media
+							.rank #{n}
+							.media-body
+								a(href="#")
+									h3 Título da notícia teste lorem ipsum dolor set, only example and text in again version photoshop.
+						///.media
+						// FIM REPETE
+					//-for
+				///.card
+
+				div(class="fb-page" data-href="https://www.facebook.com/gv8website" data-width="500" data-height="240" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true")
+			//- .col-lg-4
+		//- .row
+	//- .container
+//- main.noticias#modelo-1

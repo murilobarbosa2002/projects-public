@@ -1,0 +1,49 @@
+main.depoimentos#depoimento-mod-2
+	.page-header
+		.container
+			h1 Depoimentos
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span Depoimentos
+		//- .container
+	//- .page-header
+	.container
+		.row.mgb-40
+			-for(var d=0;d<5;d++)
+				-var i = d;
+				// REPETE
+				.col-md-4.col-sm-2.mgb-40
+					.depoimento
+						figure.avatar
+							lazyimage(src="http://placehold.it/80x80/236AF8/FFF" alt="nome/descricao" width="80" height="80")
+						//- .avatar
+						.title
+							.nome #[span(style="color: #9D192B") Maria Cecília] - SEO
+							.empresa NOME DA EMPRESA
+						p "...This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum aucto, nisi elit consequat ipsum..."
+						a(href="#" data-toggle="modal" data-target=".modal-depoimento") Veja o depoimento complemento #[i.fa.fa-angle-double-right]
+					// .depoimento
+				// .col-md-4.col-sm-2
+				// FIM REPETE
+		//- .row
+	//- .container
+
+	// MODAL
+	.modal.modal-depoimento
+		.modal-dialog.modal-lg
+			.modal-content
+				.modal-body
+					button.close(data-dismiss="modal" aria-label="Close").close &times;
+					.autor
+						span(style="font-size: 20px") #[b(style="color: #BC2828") Ana Beatriz] - Web Developer
+						br
+						span NOME DA EMPRESA
+					//- .autor
+
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				//- .modal-body
+		//- .modal-dialog
+	// FIM MODAL
+//- main.depoimentos#depoimento-mod-2

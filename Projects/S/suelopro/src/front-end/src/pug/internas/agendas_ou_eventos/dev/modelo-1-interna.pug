@@ -1,0 +1,115 @@
+main#agenda-1.page-agenda
+	.page-header
+		.container
+			h1 Nossos Eventos
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span Nossos Eventos
+		//- .container
+	//- .page-header
+
+	.container
+		.row
+			.col-lg-7.col-xl-8.mgb-40
+				article.agenda-detalhes
+					.data-flutuante.media
+						i.icon.megafone-agenda-1
+						.media-body #[span.dia 01] / Novembro
+					figure.foto
+						lazyimage(src="assets/images/agenda-1-interna-720x550.jpg" width="750" height="550" alt="nome/descricao")
+					//- .foto
+
+					.header
+						.label NOTÍCIAS
+						h2 Título da notícia Lorem Ipsum
+						.row
+							.col-auto.autor BY #[strong FULANO DE TAL]
+							.col-auto.data-post Postado em 01 de Novembro, 2018
+						//- .row
+					//- header
+
+					.body
+						p(style="text-align:justify") This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+					//- .body
+
+					.footer
+						.row.align-items-end.justify-content-between
+							.col-6.col-sm-auto
+								a(href="http://www.agenciagv8.com.br/internasgv8/internas/agendas_ou_eventos/modelo-1.html").btn.btn-voltar #[i.fas.fa-chevron-left] voltar
+							.col-6.col-sm-auto.redes-sociais
+								p Compartilhe:
+
+								a(href="#" target="_blank").rede-social.fab.fa-facebook-f
+								a(href="#" target="_blank").rede-social.fab.fa-twitter
+								a(href="#" target="_blank").rede-social.fab.fa-instagram
+								a(href="#" target="_blank").rede-social.fab.fa-pinterest-p
+								a(href="#" target="_blank").rede-social.fab.fa-linkedin-in
+						//- .row
+				//- .agenda-detalhes
+			.col-lg-5.col-xl-4.mgb-40
+				section.veja-tambem
+					.header
+						h2 #[strong Veja] também
+						p main eventos
+					//- .header
+					.body
+						// REPETE
+						article.media
+							.foto
+								lazyimage(src="http://placehold.it/110x80" width="110" height="80" alt="nome/descricao")
+							//- .foto
+							.media-body
+								h3(data-clamp="3") This is Phototsho's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. This is Phototsho's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+								p Há 2 dias
+							//- .media-body
+						//- .media
+						// FIM REPETE
+						// REPETE
+						article.media
+							.foto
+								lazyimage(src="http://placehold.it/110x80" width="110" height="80" alt="nome/descricao")
+							//- .foto
+							.media-body
+								h3 This is Phototsho's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. This is Phototsho's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+								p Há 2 dias
+							//- .media-body
+						//- .media
+						// FIM REPETE
+						// REPETE
+						article.media
+							.foto
+								lazyimage(src="http://placehold.it/110x80" width="110" height="80" alt="nome/descricao")
+							//- .foto
+							.media-body
+								h3 This is Phototsho's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. This is Phototsho's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+								p Há 2 dias
+							//- .media-body
+						//- .media
+						// FIM REPETE
+					//- .body
+				//- section.veja-tambem
+				//
+					O calendario  está sendo gerado dinamicamente via js e para pegar a data clicada...
+					<script>
+						$('.calendario .dias li').click(function () {
+							var date = $(this).data('date');
+
+							doAnything();
+						});
+					</script>
+				.calendario.mgb-40
+				//- +calendario
+		
+		section.fotos
+			h2 GALERIA DE FOTOS
+
+			.owl-carousel#galeriaDeFotos(data-lg="4" data-md="3" data-sm="2" data-nav="true" data-margin="30")
+
+				lazyimage(src="http://placehold.it/270x180" alt="nome/descricao" width="270" height="180")
+				lazyimage(src="http://placehold.it/270x180/FF2CF2/fff" alt="nome/descricao" width="270" height="180")
+				lazyimage(src="http://placehold.it/270x180/0F80F7/FFF" alt="nome/descricao" width="270" height="180")
+				lazyimage(src="http://placehold.it/270x180/009766/FFF" alt="nome/descricao" width="270" height="180")
+				lazyimage(src="http://placehold.it/270x180/000/FFF" alt="nome/descricao" width="270" height="180")
+		//- section.fotos
+	///.container
+//- main#agenda-1.page-agenda

@@ -1,0 +1,31 @@
+@mixin margin-variant($m: 5){
+	.m-#{$m}{
+		margin: #{$m}px;
+	}
+
+	.mgb-#{$m}{
+		margin-bottom: #{$m}px;
+	}
+
+	.mgt-#{$m}{
+		margin-top: #{$m}px;
+	}
+
+	.mgl-#{$m}{
+		margin-left: #{$m}px;
+	}
+
+	.mgr-#{$m}{
+		margin-right: #{$m}px;
+	}
+
+	.mglr{
+		margin-left: #{$m}px;
+		margin-right: #{$m}px;
+	}
+
+	.mgtb{
+		margin-top: #{$m}px;
+		margin-bottom: #{$m}px;
+	}
+}

@@ -1,0 +1,20 @@
+@import '_variaveis.scss';
+
+@import 'vendor/_bootstrap.scss';
+@import 'vendor/_owl-carousel.scss';
+@import "vendor/_fontAwesome-variables.scss";
+@import 'vendor/_font-awesome.scss';
+@import 'vendor/_v4-shims.scss';
+@import "vendor/slick-carousel";
+
+@import 'functions/_functions.scss';
+
+@import 'mixins/_mixins.scss';
+
+@import 'components/_components.scss';
+
+@import 'keyframes/_animations.scss';
+
+@import 'paginas-internas-padrao/paginas_internas';
+
+@import 'site/_site.scss';

@@ -1,0 +1,43 @@
+main.produtos-servicos#produtos-mod-3
+	.page-header
+		.container
+			h1 PRODUTOS
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span PRODUTOS
+		//- .container
+	//- .page-header
+	.container-fluid
+		.row.row-produtos.mgb-60
+			-for(var p=0;p<8;p++)
+				// REPETE
+				.col-lg.mgb-30
+					.produto
+						a(href="produto-detalhes.html")
+							.content
+									figure.foto
+										lazyimage(src="http://placehold.it/466x501" alt="nome/descricao" width="466" height="501")
+									//- .foto
+									.nome NOME DO PRODUTOR LOREM IPSUM
+							//- .content
+						.btn-area
+							a(href="produto-detalhes.html").btn-expanded.btn VER MAIS DETALHES
+						//- .btn-area
+					//- .produto
+					// FIM REPETE
+
+		//- .row
+
+		.paginacao
+			a(href="#" aria-label="next"): i.fa.fa-chevron-left
+			span.active 1
+			a(href="#") 2
+			a(href="#") 3
+			span ...
+			a(href="#") 8
+			a(href="#") 9
+			a(href="#") 10
+			a(href="#" aria-label="next"): i.fa.fa-chevron-right
+		//- .paginacao
+	// .container-fluid
+//- main.produtos-servicos#produtos-mod-3

@@ -1,0 +1,140 @@
+#modelo-3.empresa{
+	.title{
+		color: #ED3338;
+		font-weight: 900;
+	}
+
+	#carousel-empresa{
+		width:850px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+
+		.carousel-wrapper{
+			position: relative;
+			margin-bottom:10px;
+		}
+
+		.next,
+		.prev{
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			top: calc(50% - 20px);
+			background: #FFF;
+			border-radius: 100%;
+			display: flex;
+			align-items:center;
+			justify-content:center;
+			border:1px solid rgba(#000,0.2);
+			box-shadow: 0 0 5px rgba(#000,0.4);
+			text-decoration: none;
+
+			&:hover{
+				background: #eee;
+			}
+		}
+
+		.next{
+			right:15px;
+		}
+
+		.prev{
+			left:15px;
+		}
+
+		.carousel-indicators{
+			position: static;
+			margin-bottom: 0;
+			justify-content: flex-start;
+			width:100%;
+			margin-left:0;
+			margin-right:0;
+			overflow: auto;
+
+			li{
+				width: calc(50% - 15px);
+				min-width: calc(50% - 15px);
+				height: auto;
+				text-indent: 0;
+				background: #FFF;
+				margin:0;
+
+				& + li{
+					margin-left: 30px;
+				}
+			}
+		}
+	}
+
+	hr{
+		border-color: rgba(#000,0.2);
+		border-width: 2px;
+		margin-bottom: 50px;
+	}
+
+	.missao-visao-valores{
+		text-align:center;
+
+		.lazyimage{
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 15px;
+		}
+
+		.titulo{
+			font-size: 20px;
+			margin-bottom: 10px;
+
+			span{
+				font-weight: #ED3338;
+				font-weight: 900;
+				color: #ED3338;
+			}
+		}
+	}
+
+	.depoimento{
+		text-align: center;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		background: #ED3338;
+
+		.fas.fa-quote-left{
+			font-size: 50px;
+			margin-bottom: 15px;
+		}
+
+		h2{
+			font-weight: 300;
+			font-style: italic;
+		}
+
+		.autor{
+			margin-top:30px;
+		}
+
+	}
+
+	.autor{
+		.avatar{
+			width: 80px;
+			height: 80px;
+			border-radius: 100%;
+			border:2px solid #FFF;
+			overflow: hidden;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 10px;
+		}
+
+		.nome{
+			font-weight: bold;
+		}
+
+		.cargo{
+			font-size: 13px;
+		}
+
+	}
+}

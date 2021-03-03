@@ -1,0 +1,41 @@
+body,
+html{
+	width:100%;
+	min-height:100vh;
+}
+
+#app{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+
+	.wrapper{
+		flex-grow:1;
+	}
+}
+
+body{
+
+	@include media-breakpoint-down (md) {
+		transition: all 0.6s linear;
+
+		#app{
+			left:0;
+			position: relative;
+			transition: all 0.6s linear;
+		}
+
+		&.open-menu{
+			overflow-x: hidden;
+			
+			#app{
+				left:250px;
+			}
+
+			.main-menu{
+				left:0;
+			}
+		}
+	}
+}

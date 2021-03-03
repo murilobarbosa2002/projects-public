@@ -1,0 +1,82 @@
+.depoimentos#depoimento-mod-3{
+
+	.titles{
+		font-size:20px;
+		color:#777;
+	}
+}
+
+#depoimentos-3{
+	border:10px solid rgba(#000,0.1);
+	padding:15px;
+	margin-bottom:60px;
+	background: #fff;
+
+	.depoimento{
+		font-size: 20px;
+		color:#000;
+		position:relative;
+		overflow:hidden;
+		min-height:60px;
+
+		&:before{
+			content:'';
+			@extend .icon, .detalhe-depoimento-3;
+		}
+
+		@include media-breakpoint-down(xs){
+			&:before{
+				margin-bottom:1em;
+			}
+		}
+
+		@include media-breakpoint-up(sm){
+			padding-left:100px;
+			&:before{
+				position:absolute;
+				left:25px;
+				top:0;
+			}
+		}
+
+		.content{
+			font-family: 'OFFISFB';
+		}
+
+		.autor{
+			font-size: 16px;
+			color: #777;
+
+			.nome:before{
+				content:'';
+				display:inline-block;
+				width:1em;
+				border:1px solid currentcolor;
+				margin-right:0.5em;
+			}
+
+			.empresa{
+				font-size: 14px;
+				padding-left:toEm((16*1.5),14);
+			}
+		}
+	}
+
+	.controles{
+		text-align: right;
+		margin-top:20px;
+
+		a{
+			display: inline-block;
+			padding:0.4rem 1rem;
+			margin:0 5px;
+			color: #777;
+			transition: color 0.3s linear;
+
+			&:hover{
+				color: #000;
+				background: darken(#fff, 5%);
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+block active
+	-var active = 'home'
+header.topo
+	.faixa-topo
+		.container
+			.telefone #[i.fas.fa-phone] +55 (00) 9999-9999
+			.whatsapp #[i.fab.fa-whatsapp] +55 (00) 99999-9999
+			.email #[i.fas.fa-envelope] #[a(href="mailto:contato@empresa.com.br") contato@empresa.com.br]
+		//- .container
+	//- .faixa-topo
+	nav.mobile-controls
+		button(data-toggle="menu" aria-label="Menu" type="button").btn.btn-toggle-menu
+			i.bars
+			span.sr-only MENU
+		a(href="index.html").brand
+			img(src="assets/images/logo.png" alt="Logo").img-fluid
+	//- nav.mobile-controls
+
+	nav.main-menu
+		.content
+			figure.brand
+				a(href="index.html")
+					img(src="assets/images/logo.png" alt="Logo").img-fluid
+			//- .brand
+
+			ul.menu
+				li(class=active=='home'?'active':''): a(href="index.html") HOME
+				li(class=active=='empresa'?'active':''): a(href="empresa.html") EMPRESA
+				li(class=active=='produtos'?'active':''): a(href="produtos.html") PRODUTOS
+				li(class=active=='serviços'?'active':''): a(href="servicos.html") SERVIÇOS
+				li(class=active=='fotos'?'active':''): a(href="fotos.html") FOTOS
+				li(class=active=='clientes'?'active':''): a(href="clientes.html") CLIENTES
+				li(class=active=='contato'?'active':''): a(href="contato.html") CONTATO
+		//- .content
+	//- .menu
+//- header.topo

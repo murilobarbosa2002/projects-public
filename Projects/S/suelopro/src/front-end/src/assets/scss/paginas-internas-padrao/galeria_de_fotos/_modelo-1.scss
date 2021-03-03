@@ -1,0 +1,68 @@
+.galeria-fotos#modelo-1{
+	padding-bottom: 80px;
+
+	.album-fotografia {
+		width: 350px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 30px;
+		position: relative;
+		overflow: hidden;
+
+		.album-caption {
+			padding: 10px;
+			background: #ED1B24;
+			color: #FFF;
+
+			@include media-breakpoint-up (lg) {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				bottom: 0;
+				transform: translateY(100%);
+				transition: all 0.3s linear;
+			}
+
+			.nome{
+				font-weight: 900;
+				margin-bottom: 5px;
+				font-size: 18px;
+				line-height: 1.3;
+				max-height: (1em * 1.3 * 2);
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+			}
+
+			.description{
+				line-height: 1.4;
+				max-height: (1em * 1.4 * 2);
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			&:hover .album-caption{
+				transform: translateY(0);
+			}
+		}
+	}
+
+	.carregar-mais{
+		padding-top: 60px;
+	}
+
+	.btn-carregar-mais{
+		background: #ED1B24;
+		color:#FFF;
+		border-bottom-width:5px;
+		border-color: rgba(#000,0.2);
+		font-weight: 900;
+	}
+
+}

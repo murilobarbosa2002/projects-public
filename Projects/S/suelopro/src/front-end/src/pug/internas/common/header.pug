@@ -1,0 +1,395 @@
+// Já que o topo e o rodape desta página, são apenas exemplo, o css deles está imbutido na tag style. O restante, o que realmente importa, está no css.
+
+style.
+	body {
+	    font-family: 'Roboto', sans-serif
+	}
+
+	#topo-example {
+	    background: #9D192B;
+	    color: #fff
+	}
+
+	#topo-example .bg-menu {
+	    margin: 0;
+	    display: none
+	}
+
+	.mobile-controls-topo-example {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	    justify-content: space-between;
+	    border-bottom: 1px solid rgba(0, 0, 0, .2);
+	    background: #9D192B
+	}
+
+	.mobile-controls-topo-example .brand {
+	    padding: 5px 15px;
+	    max-width: 180px
+	}
+
+	.mobile-controls-topo-example .btn-helper {
+	    margin-left: 15px;
+	    margin-right: 15px
+	}
+
+	.btn-toggle-menu-topo {
+	    background-color: #9D192B;
+	    border-color: #9D192B;
+	    color: #FFF;
+	    border-radius: 0;
+	    display: -webkit-inline-box;
+	    display: -ms-inline-flexbox;
+	    display: inline-flex;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    margin: 0
+	}
+
+	.btn-toggle-menu-topo:hover {
+	    background-color: #7c1422;
+	    border-color: #71121f
+	}
+
+	.btn-toggle-menu-topo.focus,
+	.btn-toggle-menu-topo:focus {
+	    -webkit-box-shadow: 0 0 0 .2rem rgba(157, 25, 43, .5);
+	    box-shadow: 0 0 0 .2rem rgba(157, 25, 43, .5)
+	}
+
+	.btn-toggle-menu-topo.disabled,
+	.btn-toggle-menu-topo:disabled {
+	    color: #fff;
+	    background-color: #9D192B;
+	    border-color: #9D192B
+	}
+
+	.btn-toggle-menu-topo:not(:disabled):not(.disabled).active,
+	.btn-toggle-menu-topo:not(:disabled):not(.disabled):active,
+	.show>.btn-toggle-menu-topo.dropdown-toggle {
+	    color: #fff;
+	    background-color: #71121f;
+	    border-color: #66101c
+	}
+
+	.btn-toggle-menu-topo:not(:disabled):not(.disabled).active:focus,
+	.btn-toggle-menu-topo:not(:disabled):not(.disabled):active:focus,
+	.show>.btn-toggle-menu-topo.dropdown-toggle:focus {
+	    -webkit-box-shadow: 0 0 0 .2rem rgba(157, 25, 43, .5);
+	    box-shadow: 0 0 0 .2rem rgba(157, 25, 43, .5)
+	}
+
+	.btn-toggle-menu-topo:hover {
+	    color: #FFF
+	}
+
+	.btn-toggle-menu-topo .bars {
+	    width: 1.5em;
+	    height: .2em;
+	    background: currentcolor;
+	    display: block;
+	    -webkit-transition: -webkit-transform .3s linear;
+	    -o-transition: transform .3s linear;
+	    transition: transform .3s linear;
+	    transition: transform .3s linear, -webkit-transform .3s linear;
+	    position: relative
+	}
+
+	.btn-toggle-menu-topo .bars:after,
+	.btn-toggle-menu-topo .bars:before {
+	    content: '';
+	    display: block;
+	    width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    background: currentcolor;
+	    left: 0;
+	    bottom: 0;
+	    -webkit-transition: all .3s linear;
+	    -o-transition: all .3s linear;
+	    transition: all .3s linear
+	}
+
+	.btn-toggle-menu-topo .bars:before {
+	    margin-bottom: .4em;
+	    bottom: 0
+	}
+
+	.btn-toggle-menu-topo .bars:after {
+	    margin-top: .4em;
+	    top: 0
+	}
+
+	.btn-toggle-menu-topo[aria-expanded=true] .bars {
+	    -webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	    transform: rotate(45deg)
+	}
+
+	.btn-toggle-menu-topo[aria-expanded=true] .bars:after,
+	.btn-toggle-menu-topo[aria-expanded=true] .bars:before {
+	    margin: 0;
+	    -webkit-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	    transform: rotate(90deg)
+	}
+
+	.btn-helper {
+	    background-color: #222;
+	    border-color: #222;
+	    color: #fff;
+	    -ms-flex-item-align: center;
+	    align-self: center;
+	    width: 2em;
+	    height: 2em;
+	    border-radius: 100%;
+	    padding: 0;
+	    display: -webkit-inline-box;
+	    display: -ms-inline-flexbox;
+	    display: inline-flex;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+	    position: relative
+	}
+
+	.btn-helper:hover {
+	    color: #fff;
+	    background-color: #0f0f0f
+	}
+
+	.btn-helper.focus,
+	.btn-helper:focus {
+	    -webkit-box-shadow: 0 0 0 .2rem rgba(34, 34, 34, .5);
+	    box-shadow: 0 0 0 .2rem rgba(34, 34, 34, .5)
+	}
+
+	.btn-helper.disabled,
+	.btn-helper:disabled {
+	    color: #fff;
+	    background-color: #222;
+	    border-color: #222
+	}
+
+	.btn-helper:not(:disabled):not(.disabled).active,
+	.btn-helper:not(:disabled):not(.disabled):active,
+	.show>.btn-helper.dropdown-toggle {
+	    color: #fff;
+	    background-color: #090909;
+	    border-color: #020202
+	}
+
+	.btn-helper:not(:disabled):not(.disabled).active:focus,
+	.btn-helper:not(:disabled):not(.disabled):active:focus,
+	.show>.btn-helper.dropdown-toggle:focus {
+	    -webkit-box-shadow: 0 0 0 .2rem rgba(34, 34, 34, .5);
+	    box-shadow: 0 0 0 .2rem rgba(34, 34, 34, .5)
+	}
+
+	.btn-helper:before {
+	    content: '';
+	    display: block;
+	    position: absolute;
+	    border: .4em solid transparent;
+	    border-left-color: #222;
+	    border-bottom-color: #222;
+	    left: 100%;
+	    top: 100%;
+	    -webkit-transform: rotate(20deg) translate(-100%, -100%);
+	    -ms-transform: rotate(20deg) translate(-100%, -100%);
+	    transform: rotate(20deg) translate(-100%, -100%);
+	    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out
+	}
+
+	.btn-helper:hover {
+	    background: #3c3c3c;
+	    border-color: #3c3c3c
+	}
+
+	.btn-helper:hover:before {
+	    border-left-color: #3c3c3c;
+	    border-bottom-color: #3c3c3c
+	}
+
+	#menu-topo-example {
+	    list-style: none;
+	    padding-left: 0;
+	    margin-bottom: 0
+	}
+
+	#menu-topo-example a:hover {
+	    color: #FFF;
+	    text-decoration: none
+	}
+
+	@media (min-width:992px) {
+	    .content-topo-example .brand,
+	    .mobile-controls-topo-example {
+	        display: none
+	    }
+	    #topo-example {
+	        padding: 30px 0
+	    }
+	    .content-topo-example {
+	        padding-left: 15px;
+	        padding-right: 15px;
+	        margin-left: auto;
+	        margin-right: auto;
+	        position: relative
+	    }
+	    #menu-topo-example {
+	        display: -webkit-box;
+	        display: -ms-flexbox;
+	        display: flex;
+	        -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	        justify-content: center;
+	        -webkit-box-align: center;
+	        -ms-flex-align: center;
+	        align-items: center
+	    }
+	}
+
+	@media (min-width:992px) and (max-width:1199.98px) {
+	    .content-topo-example {
+	        width: 970px
+	    }
+	    .content-topo-example #menu-topo-example li {
+	        margin: 0 10px
+	    }
+	    .content-topo-example .btn-helper {
+	        position: absolute;
+	        left: 15px;
+	        top: 50%;
+	        -webkit-transform: translateY(-50%);
+	        -ms-transform: translateY(-50%);
+	        transform: translateY(-50%)
+	    }
+	}
+
+	@media (min-width:1200px) {
+	    .content-topo-example {
+	        width: 1170px
+	    }
+	    .content-topo-example #menu-topo-example li {
+	        margin: 0 10px
+	    }
+	    .content-topo-example .btn-helper {
+	        position: absolute;
+	        left: 15px;
+	        top: 50%;
+	        -webkit-transform: translateY(-50%);
+	        -ms-transform: translateY(-50%);
+	        transform: translateY(-50%)
+	    }
+	}
+
+	@media (max-width:991.98px) {
+	    #topo-example {
+	        height: 54px
+	    }
+	    #topo-example .bg-menu {
+	        margin: 0;
+	        display: none;
+	    }
+	    #topo-example .mobile-controls-topo-example {
+	        position: fixed;
+	        top: 0;
+	        width: 100%;
+	        height: 54px;
+	        z-index: 997
+	    }
+	    #toggle-menu:checked~.content-topo-example {
+	        left: 0
+	    }
+	    #toggle-menu:checked~.bg-menu {
+	        position: fixed;
+	        left: 0;
+	        top: 0;
+	        width: 100%;
+	        height: 100%;
+	        background: rgba(0, 0, 0, .8);
+	        z-index: 998;
+	        display: block;
+	    }
+	    .content-topo-example {
+	        position: fixed;
+	        top: 0;
+	        left: -250px;
+	        width: 250px;
+	        height: 100%;
+	        overflow: auto;
+	        z-index: 999;
+	        background: #9D192B;
+	        -webkit-transition: left .4s linear;
+	        -o-transition: left .4s linear;
+	        transition: left .4s linear
+	    }
+	    .content-topo-example .brand {
+	        padding: 30px 15px 15px;
+	        text-align: center;
+	        border-bottom: 1px solid rgba(0, 0, 0, .2)
+	    }
+	    .content-topo-example .brand-menu,
+	    .content-topo-example .btn-helper {
+	        display: none
+	    }
+	    .content-topo-example #menu-topo-example a {
+	        display: block;
+	        padding: 10px 15px;
+	        border-top: 1px solid rgba(0, 0, 0, .2);
+	        border-bottom: 1px solid rgba(0, 0, 0, .2)
+	    }
+	    .content-topo-example #menu-topo-example a:hover {
+	        background: rgba(0, 0, 0, .1)
+	    }
+	}
+	
+header#topo-example
+	.mobile-controls-topo-example
+		button.btn.btn-helper
+			i.fa.fa-question
+			span.sr-only informativo
+		//- .helper
+		.brand
+			img(src="assets/images/logo-example.png").img-fluid
+		//- .brand
+		label(for="toggle-menu").btn.btn-toggle-menu-topo
+			span.bars
+			span.sr-only MENU
+	//- .mobile-controls-topo-example
+
+	input(type="checkbox" name="toggle-menu" id="toggle-menu").d-none
+
+	label(for="toggle-menu").bg-menu
+		span.sr-only Close Menu
+
+	.content-topo-example
+		.brand
+			a
+				img(src="assets/images/logo-example.png").img-fluid
+		//- .brand
+		button.btn.btn-helper
+			i.fa.fa-question
+			span.sr-only informativo
+		//- .helper
+		ul#menu-topo-example
+			li: a SEU MENU
+			li: a SEU MENU
+			li: a SEU MENU
+			li.brand-menu
+				a
+					img(src="assets/images/logo-example.png").img-fluid
+			//- li.brand-menu
+			li: a SEU MENU
+			li: a SEU MENU
+			li: a SEU MENU
+	//- .content-topo-example
+//- header.topo-example

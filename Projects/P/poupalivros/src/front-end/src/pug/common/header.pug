@@ -1,0 +1,81 @@
+header.topo
+	.mobile-controls
+		button(type="button" role="button" aria-label="MENU" data-toggle="menu").btn
+			i.fas.fa-bars
+			span.sr-only MENU
+		//- button(type="button" role="button" aria-label="MENU")
+		.brand
+			a(href="index.html")
+				img(src="assets/images/logo-mobile.webp" alt="Seu Logo").img-fluid
+		//- .brand
+		button(type="button" role="button" aria-label="BUSCAS" data-toggle="search").btn
+			svg.svg-icon
+				use(xlink:href="#search")
+			span.sr-only BUSCAS
+		//- button(type="button" role="button" aria-label="MENU")
+	//- .mobile-controls
+
+	.main-topo
+		.faixa-topo
+			.content
+				.boas-vindas Olá, seja bem vindo!
+
+				ul.dados-contato
+					li: a(href="tel:0099999999") #[i.fas.fa-phone.fa-flip-horizontal] (00) 9999-9999
+					li: a(href="mainto:contato@dominio.com.br") #[i.fas.fa-envelope] contato@dominio.com.br
+				//- .dados-contato
+
+				.redes-sociais
+					.title Siga-nos:
+					.content
+						a(href="#" target="_blank" title="Facebook").fab.fa-facebook-f
+						a(href="#" target="_blank" title="Instagram").fab.fa-instagram
+						a(href="#" target="_blank" title="Pinterest").fab.fa-pinterest-p
+						a(href="#" target="_blank" title="Twitter").fab.fa-twitter
+				//- .redes-sociais
+			//- .content
+		//- .faixa-topo
+
+		.nav-content
+			.content
+				.brand
+					a(href="index.html")
+						img(src="assets/images/logo.png", alt="Seu Logo").img-fluid
+				//- .brand
+
+				ul.menu
+					li.active: a(href="index.html") HOME
+					li: a(href="empresa.html") EMPRESA
+					li: a(href="categoria.html") CATEGORIA
+					li: a(href="contato.html") CONTATO
+				//- ul.menu
+
+				.search
+					form
+						label.sr-only(for="search")
+						.input-group
+							input(type="search" name="search" id="search" placeholder="Buscar..." aria-label="Campo de busca").form-control
+							button.btn-search(aria-label="Botão Procurar").btn.btn-search
+								span.sr-only Procurar
+								svg.svg-icon
+									use(xlink:href="#search")
+						//- .input-group
+					//- form
+				//- .search
+			//- .content
+		//- .nav-content
+	//- .main-topo
+
+	.search-mobile
+		form
+			label(for="search-mobile") O que está procurando?
+			.input-group
+				input(type="search" name="search" id="search-mobile" aria-label="Campo de Busca").form-control
+				button.btn-search(aria-label="Botão Procurar").btn.btn-search
+					span.sr-only Procurar
+					svg.svg-icon
+						use(xlink:href="#search")
+			//- .input-group
+		//- form
+	//- .search-mobile
+//- header

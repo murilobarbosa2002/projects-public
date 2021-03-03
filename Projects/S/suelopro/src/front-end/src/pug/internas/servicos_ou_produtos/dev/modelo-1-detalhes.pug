@@ -1,0 +1,43 @@
+zzmain.produtos-servicos#produtos-mod-1
+	.page-header
+		.container
+			h1 PRODUTOS
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span PRODUTOS
+		//- .container
+	//- .page-header
+	.container
+		.row
+			.col-lg-6.mgb-60
+				p #[span(style="font-size:20px;") LOREM & IPSUM]
+				hr
+				p #[strong(style="font-size:30px") TÍTULO EXEMPLO TESTE]
+
+				br
+
+				p(style="text-align: justify;") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p(style="text-align: justify;") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p(style="text-align: justify;") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			//- .col-lg-6
+
+			.col-lg-6.mgb-60
+				.album-produtos
+					figure.mgb-15
+						a(href="http://www.agenciagv8.com.br/internasgv8/assets/images/produt-modelo-1-1000x680.jpg" data-lightbox="produto" title="nome/descricao")
+							lazyimage(src="http://www.agenciagv8.com.br/internasgv8/assets/images/produt-modelo-1-540x367.jpg" alt="nome/descricao" width="540" height="367")
+					//- figure.mgb-15
+
+					.album
+						-for(var i=1;i<5;i++)
+							// REPETE
+							figure.thumbnail
+								a(href=`http://www.agenciagv8.com.br/internasgv8/assets/images/produt-modelo-${i}-1000x680.jpg` data-lightbox="produto" title="nome/descricao")
+									lazyimage(src=`http://www.agenciagv8.com.br/internasgv8/assets/images/produt-modelo-${i}-125x85.jpg` alt="nome/descricao" width="125" height="85")
+							// FIM REPETE
+					//- .album
+				//- .album
+			//- .col-lg-6
+		//- .row
+	//- .container
+//- main.produtos-servicos

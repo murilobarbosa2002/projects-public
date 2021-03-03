@@ -1,0 +1,102 @@
+main.produtos-servicos#produtos-mod-2
+	.page-header
+		.container
+			h1 Nossos Serviços
+			ol.breadcrumb
+				li: a(href="#") Home
+				li.active: span Nossos Serviços
+		//- .container
+	//- .page-header
+
+	.container
+		.mgb-60
+			h2.subtitle-produtos <svg width="1em" height="1em"><use xlink:href="http://www.agenciagv8.com.br/internasgv8/assets/images/sprites.svg#detail-title" fill="currentcolor"/></svg> SERVIÇOS NOME DA EMPRESA
+			p.text-muted Conheça mais sobre este serviço, veja os detalhes a seguir:
+		//- .mgb-60
+
+		.row.mgb-60
+			.col-lg.order-lg-2.mgb-30
+				h2.subtitle-produtos <svg width="1em" height="1em"><use xlink:href="http://www.agenciagv8.com.br/internasgv8/assets/images/sprites.svg#detail-title" fill="currentcolor"/></svg> SOBRE O SERVIÇO LOREM IPSUM
+
+				p(style="color: #777;") This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. 
+
+				p(style="color: #777;") Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+			//- .col-lg
+			
+			// se remover essa coluna, a de cima vai preencher o espaço vazio
+			.col-lg-5.order-lg-1.mgb-30
+				.carousel.slide#carousel(data-interval="5000")
+					.carousel-inner
+						-for(var p=0;p<6;p++)
+							-var s = p+1;
+							// REPETE
+							figure.carousel-item(class=s==1?'active':'')
+								a(href=`http://www.agenciagv8.com.br/internasgv8/assets/images/produto-${s}-1000x685.jpg` data-lightbox="produto" title="nome/descricao")
+									lazyimage(src=`http://www.agenciagv8.com.br/internasgv8/assets/images/produto-${s}-460x315.jpg` alt="nome/descricao" width="460" height="315")
+							// FIM REPETE
+					//- .carsousel-inner
+
+					.controls
+						a(href="#carousel" data-slide="prev"): i.fa.fa-chevron-left
+						a(href="#carousel" data-slide="next"): i.fa.fa-chevron-right
+					//- .controls
+				//- .carousel
+			//- .col-lg-5
+		//- .row
+
+		section.mgb-60
+			h2.mgb-30.subtitle-produtos <svg width="1em" height="1em"><use xlink:href="http://www.agenciagv8.com.br/internasgv8/assets/images/sprites.svg#detail-title" fill="currentcolor"/></svg> RECOMENDAÇÕES DE USO
+
+			// estou simulando o editor de texto do painel
+
+			p(style="color: #777") O serviço #[strong Lorem Ipsum] é indicado nas seguintes situações:
+
+			table(width="100%")
+				tr
+					td
+						table(width="300" cellspacing="0" cellpadding="0" style="float:left")
+							tr
+								td(valign="top" width="30"): img(src="http://www.agenciagv8.com.br/internasgv8/assets/images/cliente-list-style.png" alt="list-style")
+								td(valign="top") Aenan viverra pellentesque loctus.
+							//- tr
+							tr
+								td(valign="top" width="30"): img(src="http://www.agenciagv8.com.br/internasgv8/assets/images/cliente-list-style.png" alt="list-style")
+								td(valign="top") Warehousing
+							tr
+								td(valign="top" width="30"): img(src="http://www.agenciagv8.com.br/internasgv8/assets/images/cliente-list-style.png" alt="list-style")
+								td(valign="top") Warehousing Management Systems (WMS)
+							tr
+								td(valign="top"): img(src="http://www.agenciagv8.com.br/internasgv8/assets/images/cliente-list-style.png" alt="list-style")
+								td(valign="top") Freight Distribution
+
+						table(width="300" cellspacing="0" cellpadding="0" style="float:left")
+							tr
+								td(valign="top" width="30"): img(src="http://www.agenciagv8.com.br/internasgv8/assets/images/cliente-list-style.png" alt="list-style")
+								td(valign="top") Aenan viverra pellentesque loctus.
+							//- tr
+							tr
+								td(valign="top" width="30"): img(src="http://www.agenciagv8.com.br/internasgv8/assets/images/cliente-list-style.png" alt="list-style")
+								td(valign="top") Warehousing
+							tr
+								td(valign="top" width="30"): img(src="http://www.agenciagv8.com.br/internasgv8/assets/images/cliente-list-style.png" alt="list-style")
+								td(valign="top") Warehousing Management Systems (WMS)
+							tr
+								td(valign="top"): img(src="http://www.agenciagv8.com.br/internasgv8/assets/images/cliente-list-style.png" alt="list-style")
+								td(valign="top") Freight Distribution
+							//- td(valign="top")
+
+						table(width="300" cellspacing="0" cellpadding="0" style="float:left")
+							tr
+								td(valign="top" width="30"): img(src="http://www.agenciagv8.com.br/internasgv8/assets/images/cliente-list-style.png" alt="list-style")
+								td(valign="top") Aenan viverra pellentesque loctus.
+							//- tr
+							tr
+								td(valign="top" width="30"): img(src="http://www.agenciagv8.com.br/internasgv8/assets/images/cliente-list-style.png" alt="list-style")
+								td(valign="top") Warehousing
+							//- tr
+					//- td
+				//- tr
+			//- table
+		//- section.mgb-60
+	//- .container
+//- main.produtos-servicos#produtos-mod-2
