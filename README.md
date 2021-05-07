@@ -10,7 +10,11 @@ Todos estão disponivéis para que vocês possam visualizar a forma que trabalho
 
 ### Contato
 **NOME:** Murilo Barbosa
+<br/>
+
 **TELEFONE:** +5514997797848
+<br/>
+
 **EMAIL:** murilo.barbosa2609@gmail.com 
 <br/>
 [**LinkedIn**](https://www.linkedin.com/in/murilo-barbosa-81a879182/)
