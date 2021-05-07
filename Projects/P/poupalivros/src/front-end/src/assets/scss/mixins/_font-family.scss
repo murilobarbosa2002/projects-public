@@ -1,7 +1,0 @@
-@mixin fontFamily($font: 'montserratregular'){
-	font-family: $font, var(--font-family-sans-serif, sans-serif);
-}
-
-@mixin font($font: 'montserratregular'){
-	@include fontFamily($font);
-}
